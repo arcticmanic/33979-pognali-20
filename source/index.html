@@ -1,12 +1,310 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
   </head>
-  <body>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="img/logo-mobile-white@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+      </div>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">О сервисе</a>
+          </li>
+          <li class="site-list__item"i>
+            <a href="#">Направления</a>
+          </li>
+          <li class="site-list__item"i>
+            <a href="#">Попутчики</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login js-login" href="login.html">Авторизация</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="page-header__social social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
+          </a>
+        </li>
+      </ul>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main class="page-main">
+      <h1>В путешествие с крутыми попутчиками!</h1>
+      <section class="feedback">
+        <ul class="feedback__list">
+          <li class="feedback__item">
+            <a href="tel:+1234567890">
+              <img src="img/topmenu-phone.svg" width="18" height="18" alt="Позвонить">
+            </a>
+          </li>
+          <li class="feedback__item">
+            <a href="mailto:mail@mail.test">
+              <img src="img/topmenu-mail.svg" width="18" height="16" alt="Оправить email">
+            </a>
+          </li>
+          <li class="feedback__item">
+            <a class="feedback__login js-login" href="login.html">Авторизация</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block-quote">
+        <h2 class="visually-hidden">Отзыв</h2>
+        <div class="block-quote__text">
+          «Лучшее приложение, что я видел в жизни!»
+        </div>
+        <div class="block-quote__author">
+          Мурат Эльтазин главный редактор газеты «гаджетлайф»
+        </div>
+      </section>
+
+      <section class="menu-trip">
+        <h2 class="visually-hidden">Меню путешественника</h2>
+        <ul class="menu-trip__list">
+          <li class="menu-trip__item"><a href="#" class="menu-trip__link">Выберите направление</a></li>
+          <li class="menu-trip__item"><a href="#" class="menu-trip__link">Изучите идеи путешественников</a></li>
+          <li class="menu-trip__item"><a href="#" class="menu-trip__link">Находите тех, кто похож на вас</a></li>
+          <li class="menu-trip__item"><a href="#" class="menu-trip__link">Путешествуйте вместе!</a></li>
+        </ul>
+      </section>
+
+      <section class="block-about block-content">
+        <h2>О сервисе</h2>
+        <p>Любое путешествие веселее
+        с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p><strong>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</strong></p>
+      </section>
+
+      <section class="block-countries block-content--light">
+        <h2>Направления</h2>
+        <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <ul class="block-countries__list">
+          <li class="block-countries__item coutry-card">
+            <div class="coutry-card__image">
+              <img src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Изображение Тайланда">
+            </div>
+            <div class="coutry-card__content">
+              <div class="coutry-card__flag">
+                <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланда">
+              </div>
+              <div class="coutry-card__title">Таиланд</div>
+              <div class="coutry-card__slogan">Джунгли зовут!</div>
+              <div class="coutry-card__counter">18321</div>
+            </div>
+          </li>
+          <li class="block-countries__item coutry-card">
+            <div class="coutry-card__image">
+              <img src="img/france-mobile@1x.jpg" width="270" height="110" alt="Изображение Франции">
+            </div>
+            <div class="coutry-card__content">
+              <div class="coutry-card__flag">
+                <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Франции">
+              </div>
+              <div class="coutry-card__title">Франция</div>
+              <div class="coutry-card__slogan">Трэ бьен, манифик!</div>
+              <div class="coutry-card__counter">12518</div>
+            </div>
+          </li>
+          <li class="block-countries__item">
+            <div class="coutry-card__image">
+              <img src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Изображение Чехия">
+            </div>
+            <div class="coutry-card__content">
+              <div class="coutry-card__flag">
+                <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+              </div>
+              <div class="coutry-card__title">Чехия</div>
+              <div class="coutry-card__slogan">Закоулки старой Европы</div>
+              <div class="coutry-card__counter">5326</div>
+            </div>
+          </li>
+        </ul>
+        <div class="block-countries__all">
+          <a class="button button--all" href="#">Показать все</a>
+        </div>
+      </section>
+
+      <section class="block-users block-content">
+        <h2>Попутчики</h2>
+        <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p><strong>Теперь можно легко найти единомышленников!</strong></p>
+        <div class="block-users__all">
+          <a class="button button--more" href="#">Показать все</a>
+        </div>
+        <ul class="block-users__list">
+          <li class="block-users__item user-card">
+            <div class="user-card__image">
+              <img src="img/firsova-desktop@1x.jpg" alt="Фото пользователя Таня Фирсова">
+              <div class="user-card__level level">
+                <div class="level__number">99</div>
+                <div class="level__caption">level</div>
+                <div class="level__xp"></div>
+              </div>
+            </div>
+            <div class="user-card__content">
+              <div class="user-card__flags">
+                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Шри-Ланки">
+                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Тайланда">
+                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Сейшел">
+              </div>
+              <div class="user-card__name">
+                <div class="user-card__status"></div>
+                Таня Фирсова
+              </div>
+              <div class="user-card__tags">
+                <a href="#">#ЗОЖ</a>
+                <a href="#">#ПП</a>
+                <a href="#">#Фитнес</a>
+                <a href="#">#пляж</a>
+                <a href="#">#авокадо</a>
+                <a href="#">#смузи</a>
+              </div>
+              <div class="user-card__transport">
+                <img src="img/plane.svg" width="21" height="21" alt="Иконка самолета">
+                <img src="img/bus.svg" width="21" height="21" alt="Иконка автобуса">
+                <img src="img/bike.svg" width="21" height="21" alt="Иконка велосипеда">
+                <img src="img/run.svg" width="21" height="21" alt="Иконка бегущего человека">
+              </div>
+            </div>
+          </li>
+          <li class="block-users__item user-card">
+            <div class="user-card__image">
+              <img src="img/demin-desktop@1x.jpg" alt="Фото пользователя Петя Демин">
+              <div class="user-card__level level">
+                <div class="level__number">80</div>
+                <div class="level__caption">level</div>
+                <div class="level__xp"></div>
+              </div>
+            </div>
+            <div class="user-card__content">
+              <div class="user-card__flags">
+                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Бельгии">
+                <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="Флаг Чехии">
+              </div>
+              <div class="user-card__name">
+                <div class="user-card__status"></div>
+                Петя Демин
+              </div>
+              <div class="user-card__tags">
+                <a href="#">#бургер</a>
+                <a href="#">#бар</a>
+                <a href="#">#футбол</a>
+                <a href="#">#концерт</a>
+                <a href="#">#крафт</a>
+              </div>
+              <div class="user-card__transport">
+                <img src="img/plane.svg" width="21" height="21" alt="Иконка самолета">
+                <img src="img/bus.svg" width="21" height="21" alt="Иконка автобуса">
+                <img src="img/bike.svg" width="21" height="21" alt="Иконка велосипеда">
+                <img src="img/run.svg" width="21" height="21" alt="Иконка бегущего человека">
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="block-countries__all">
+          <a class="button button--all" href="#">Показать всех</a>
+        </div>
+      </section>
+
+      <section class="block-add-profile block-countries block-content--light">
+        <h2>Добавьте свой профиль</h2>
+        <div class="block-add-profile__thumbnail">
+          <img src="https://via.placeholder.com/100x100" width="100" height="100" alt="Иконка раздела &laquo;Добавьте свой профиль&raquo;">
+        </div>
+        <ul class="block-add-profile__list block-add-profile__list--numbered">
+          <li class="block-add-profile__item">
+            Базовое размещение<br>
+            Бесплатно
+          </li>
+          <li class="block-add-profile__item">
+            Вывод на первых позициях<br>
+            99 руб./мес
+          </li>
+          <li class="block-add-profile__item">
+            Кастомный цвет карточки<br>
+            59 руб./мес
+          </li>
+        </ul>
+        <button class="block-add-profile__show js-show" type="button">
+          Показать тарифы для бизнеса
+        </button>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo-mobile-blue@1x.png" width="96" height="18" alt="Логотип &laquo;Погнали&raquo;">
+      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
+          </a>
+        </li>
+      </ul>
+      <div class="copyright">
+        Разработано
+        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип &laquo;Htmlacademy&raquo;">
+      </div>
+    </footer>
+
+    <div class="modal">
+      <section class="block-add-profile__modal">
+        <h2>Бизнес-тарифы</h2>
+        <ul class="block-add-profile__list">
+          <li class="block-add-profile__item">
+            Реклама у блоггера<br>
+            300 000 руб./пост
+          </li>
+          <li class="block-add-profile__item">
+            Накрутка подписчиков<br>
+            от 1 руб./шт.
+          </li>
+          <li class="block-add-profile__item">
+            Лайки от ботов<br>
+            от 20 коп./лайк
+          </li>
+          <li class="block-add-profile__item">
+            Ваш продакт-плейсмент<br>
+            Индивидуально
+          </li>
+        </ul>
+      <button class="block-add-profile__close js-close" type="button">Закрыть окно</button>
+      </section>
+    </div>
 
   </body>
 </html>
