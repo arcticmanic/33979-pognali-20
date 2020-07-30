@@ -9,28 +9,28 @@
       <div class="page-header__logo">
         <img src="img/logo-mobile-white@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
       </div>
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-      </div>
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="#">О сервисе</a>
-          </li>
-          <li class="site-list__item"i>
-            <a href="#">Направления</a>
-          </li>
-          <li class="site-list__item"i>
-            <a href="#">Попутчики</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__login js-login" href="login.html">Авторизация</a>
-          </li>
-        </ul>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="#">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login js-login" href="login.html">Авторизация</a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+        </div>
       </nav>
       <ul class="page-header__social social">
         <li class="social__item">
@@ -53,30 +53,30 @@
 
     <main class="page-main">
       <h1>В путешествие с крутыми попутчиками!</h1>
-      <section class="feedback">
-        <ul class="feedback__list">
-          <li class="feedback__item">
+      <div class="block-auth">
+        <ul class="block-auth__list">
+          <li class="block-auth__item">
             <a href="tel:+1234567890">
               <img src="img/topmenu-phone.svg" width="18" height="18" alt="Позвонить">
             </a>
           </li>
-          <li class="feedback__item">
+          <li class="block-auth__item">
             <a href="mailto:mail@mail.test">
               <img src="img/topmenu-mail.svg" width="18" height="16" alt="Оправить email">
             </a>
           </li>
-          <li class="feedback__item">
-            <a class="feedback__login js-login" href="login.html">Авторизация</a>
+          <li class="block-auth__item">
+            <a class="block-auth__login js-login" href="login.html">Авторизация</a>
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section class="block-quote">
+      <section class="review">
         <h2 class="visually-hidden">Отзыв</h2>
-        <div class="block-quote__text">
+        <div class="review__text">
           «Лучшее приложение, что я видел в жизни!»
         </div>
-        <div class="block-quote__author">
+        <div class="review__author">
           Мурат Эльтазин главный редактор газеты «гаджетлайф»
         </div>
       </section>
@@ -98,7 +98,7 @@
         <p><strong>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</strong></p>
       </section>
 
-      <section class="block-countries block-content--light">
+      <section class="block-countries block-content block-content--light">
         <h2>Направления</h2>
         <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="block-countries__list">
@@ -128,7 +128,7 @@
               <div class="coutry-card__counter">12518</div>
             </div>
           </li>
-          <li class="block-countries__item">
+          <li class="block-countries__item coutry-card">
             <div class="coutry-card__image">
               <img src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Изображение Чехия">
             </div>
@@ -224,12 +224,12 @@
             </div>
           </li>
         </ul>
-        <div class="block-countries__all">
+        <div class="block-users__all">
           <a class="button button--all" href="#">Показать всех</a>
         </div>
       </section>
 
-      <section class="block-add-profile block-countries block-content--light">
+      <section class="block-add-profile block-countries block-content block-content--light">
         <h2>Добавьте свой профиль</h2>
         <div class="block-add-profile__thumbnail">
           <img src="https://via.placeholder.com/100x100" width="100" height="100" alt="Иконка раздела &laquo;Добавьте свой профиль&raquo;">
@@ -282,27 +282,27 @@
     </footer>
 
     <div class="modal">
-      <section class="block-add-profile__modal">
+      <section class="block-tariffs">
         <h2>Бизнес-тарифы</h2>
-        <ul class="block-add-profile__list">
-          <li class="block-add-profile__item">
+        <ul class="block-tariffs__list">
+          <li class="block-tariffs__item">
             Реклама у блоггера<br>
             300 000 руб./пост
           </li>
-          <li class="block-add-profile__item">
+          <li class="block-tariffs__item">
             Накрутка подписчиков<br>
             от 1 руб./шт.
           </li>
-          <li class="block-add-profile__item">
+          <li class="block-tariffs__item">
             Лайки от ботов<br>
             от 20 коп./лайк
           </li>
-          <li class="block-add-profile__item">
+          <li class="block-tariffs__item">
             Ваш продакт-плейсмент<br>
             Индивидуально
           </li>
         </ul>
-      <button class="block-add-profile__close js-close" type="button">Закрыть окно</button>
+        <button class="block-tariffs__close js-close" type="button">Закрыть окно</button>
       </section>
     </div>
 
