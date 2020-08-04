@@ -1,0 +1,8 @@
+.promo {
+  background-color: var(--basic-blue-dark);
+  color: var(--basic-white);
+}
+
+.promo__wrapper {
+  @include wrapper;
+}

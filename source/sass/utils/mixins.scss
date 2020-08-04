@@ -12,3 +12,17 @@
   left: 0;
   margin: auto;
 }
+
+@mixin wrapper($padding: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
+  padding: 0 $padding;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 $padding-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 $padding-desktop;
+    max-width: 1440px;
+  }
+}

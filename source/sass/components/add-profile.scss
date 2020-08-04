@@ -1,0 +1,11 @@
+.add-profile {
+
+}
+
+.add-profile__wrapper {
+  @include wrapper;
+}
+
+.add-profile__list {
+  @include reset-list;
+}

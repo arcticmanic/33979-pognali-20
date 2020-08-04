@@ -1,0 +1,17 @@
+.main-nav {
+  background-color: var(--basic-white);
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+.site-list__item {
+  a {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--basic-blue-dark2);
+  }
+}

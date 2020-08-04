@@ -1,0 +1,12 @@
+.contacts {
+  background-color: var(--basic-blue-dark2);
+  color: var(--basic-white);
+}
+
+.contacts__wrapper {
+  @include wrapper;
+}
+
+.contacts__address {
+  background-color: var(--basic-yellow);
+}

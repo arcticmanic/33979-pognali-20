@@ -1,0 +1,11 @@
+.countries {
+
+}
+
+.countries__wrapper {
+  @include wrapper;
+}
+
+.countries__list {
+  @include reset-list;
+}

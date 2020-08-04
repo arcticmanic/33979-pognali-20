@@ -1,0 +1,16 @@
+.auth {
+
+}
+
+.auth__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+.auth__item {
+  a {
+    color: var(--basic-blue-dark);
+    background-color: var(--basic-yellow);
+  }
+}
