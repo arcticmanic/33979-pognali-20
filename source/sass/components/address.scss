@@ -1,0 +1,12 @@
+.address {
+  background-color: var(--basic-yellow);
+  color: var(--basic-blue);
+}
+
+.address__wrapper {
+  @include wrapper;
+}
+
+.address__address {
+  background-color: var(--basic-yellow);
+}

@@ -8,13 +8,18 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="page-header__logo">
-        <img src="img/logo-mobile-white@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo">
+          <img src="img/logo-mobile-white@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+        </div>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+          <div class="main-nav__logo">
+            <img src="img/logo-mobile-blue@1x.png" width="100" height="15" alt="Логотип &laquo;Погнали&raquo;">
+          </div>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#">О сервисе</a>
@@ -31,25 +36,30 @@
               <a class="user-list__login js-login" href="login.html">Авторизация</a>
             </li>
           </ul>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+          <div class="phone main-nav__phone">
+            8 800 555-86-28
+          </div>
+          <div class="email main-nav__email">
+            mail@htmlacademy.ru
+          </div>
+          <ul class="social social--top">
+            <li class="social__item">
+              <a href="#">
+                <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#">
+                <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#">
+                <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="social">
-          <li class="social__item">
-            <a href="#">
-              <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#">
-              <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#">
-              <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
-            </a>
-          </li>
-        </ul>
       </nav>
     </header>
 
@@ -261,8 +271,8 @@
         </div>
       </section>
 
-      <section class="contacts">
-        <div class="contacts__wrapper">
+      <section class="ask-us">
+        <div class="ask-us__wrapper">
           <h2>Заинтересовались?</h2>
           <p>
             Зарегистрируйтесь,<br>
@@ -270,58 +280,61 @@
             Уже зарегистрированы? Тогда<br>
             скорее <a href="#">авторизуйтесь</a>.
           </p>
-          <form class="contacts__form" action="https://echo.htmlacademy.ru/">
-            <input type="email" name="email" id="contacts-user-email">
-            <label for="contacts-user-email">Email</label>
+          <form class="ask-us__form" action="https://echo.htmlacademy.ru/">
+            <input type="email" name="email" id="ask-us-user-email">
+            <label for="ask-us-user-email">Email</label>
             <button type="submit"></button>
           </form>
           <p>
             Остались вопросы?<br>
             Мы с радостью на них ответим!
           </p>
-          <div class="contacts__phone">
+          <div class="phone ask-us__phone">
             8 800 555-86-28
           </div>
-          <div class="contacts__email">
+          <div class="email ask-us__phone">
             mail@htmlacademy.ru
           </div>
         </div>
-        <div class="contacts__wrapper--accent">
-          <div class="contacts__address">
+      </section>
+      <section class="address">
+        <div class="address__wrapper">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <address>
             ул. Большая Конюшенная,&nbsp;19/8
-            <button type="button">Проложить маршрут</button>
-          </div>
+          </address>
+          <button class="address__button" type="button">Проложить маршрут</button>
         </div>
-        <div class="contacts__wrapper--accent">
-          <div class="contacts__map"></div>
-        </div>
+        <div class="address__map"></div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <img src="img/logo-mobile-blue@1x.png" width="96" height="18" alt="Логотип &laquo;Погнали&raquo;">
-      </div>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="#">
-            <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#">
-            <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#">
-            <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
-          </a>
-        </li>
-      </ul>
-      <div class="copyright">
-        Разработано
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип &laquo;Htmlacademy&raquo;">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img src="img/logo-mobile-blue@1x.png" width="96" height="18" alt="Логотип &laquo;Погнали&raquo;">
+        </div>
+        <ul class="social social--bottom">
+          <li class="social__item">
+            <a href="#">
+              <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          Разработано
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип &laquo;Htmlacademy&raquo;">
+        </div>
       </div>
     </footer>
 

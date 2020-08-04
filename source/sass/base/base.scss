@@ -15,9 +15,10 @@
   color: var(--basic-black);
 }
 
-.page-header {
-  background-color: var(--basic-blue-dark);
-  background-image: url('../img/globe-back-mobile.png');
-  background-repeat: no-repeat;
-  color: var(--basic-white);
+.phone,
+.email {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
 }

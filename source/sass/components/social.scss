@@ -2,4 +2,25 @@
   @include reset-list;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  &--top {
+    margin: 0 auto;
+  }
+
+  &--bottom {
+    margin-bottom: 37px;
+  }
+}
+
+.social__item {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--basic-yellow);
+    border-radius: 9999px;
+  }
 }

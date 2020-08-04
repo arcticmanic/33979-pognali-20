@@ -1,12 +1,17 @@
-.contacts {
+.ask-us {
   background-color: var(--basic-blue-dark2);
   color: var(--basic-white);
 }
 
-.contacts__wrapper {
+.ask-us__wrapper {
   @include wrapper;
 }
 
-.contacts__address {
+.ask-us__address {
   background-color: var(--basic-yellow);
+}
+
+.ask-us__phone,
+.ask-us__email {
+  color: var(--basic-yellow);
 }

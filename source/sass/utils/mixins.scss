@@ -14,15 +14,18 @@
 }
 
 @mixin wrapper($padding: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
-  padding: 0 $padding;
+  padding-left: $padding;
+  padding-right: $padding;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    padding: 0 $padding-tablet;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 $padding-desktop;
+    padding-left: $padding-desktop;
+    padding-right: $padding-tablet;
     max-width: 1440px;
   }
 }
