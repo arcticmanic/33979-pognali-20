@@ -1,0 +1,31 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin centered {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin wrapper($padding: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
+  padding-left: $padding;
+  padding-right: $padding;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-tablet;
+    max-width: 1440px;
+  }
+}

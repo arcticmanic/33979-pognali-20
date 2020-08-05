@@ -1,0 +1,34 @@
+.page-footer {
+  background-color: var(--basic-white);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 45px;
+}
+
+.page-footer__wrapper {
+  @include wrapper;
+  padding-top: 35px;
+}
+
+.page-footer__logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-footer__social {
+  justify-content: center;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0 19px;
+  font-size: 16px;
+  line-height: 16px;
+  border-top: 1px solid var(--grey-light);
+
+  img {
+    width: 27px;
+  }
+}

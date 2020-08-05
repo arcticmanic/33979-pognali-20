@@ -1,0 +1,12 @@
+.users {
+  background-color: var(--basic-blue-dark2);
+  color: var(--basic-white);
+}
+
+.users__wrapper {
+  @include wrapper;
+}
+
+.users__list {
+  @include reset-list;
+}

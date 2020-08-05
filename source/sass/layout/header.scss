@@ -1,0 +1,44 @@
+.page-header {
+  background-color: var(--basic-blue-dark);
+  background-image: url('../img/globe-back-mobile.png');
+  background-repeat: no-repeat;
+  color: var(--basic-white);
+}
+
+.page-header__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 73px;
+}
+
+.page-header__toggle {
+  background: none;
+  border: none;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--basic-white);
+    border-radius: 1.5px;
+    margin-bottom: 5px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--basic-white);
+    border-radius: 1.5px;
+  }
+}
+
+.page-header__logo {
+  img {
+    display: block;
+  }
+}

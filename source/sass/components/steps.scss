@@ -1,0 +1,22 @@
+.steps {
+
+}
+
+.steps__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.steps__item {
+  display: flex;
+  width: 100%;
+  background-color: var(--special-orange);
+
+  a {
+    color: var(--basic-blue-dark);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
