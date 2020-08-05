@@ -1,0 +1,13 @@
+.level {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  line-height: 1;
+  background-color: transparent;
+  border: 3px solid var(--special-orange);
+}
