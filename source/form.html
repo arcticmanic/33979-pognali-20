@@ -102,22 +102,20 @@
           <h2>Мои планы:</h2>
           <ul class="user-plans__list">
             <li class="user-plans__item">
-              <div class="user-plans__number">1</div>
               <div class="user-plans__countries">Франция, Италия</div>
               <div class="user-plans__info">
                 <p>3 попутчика</p>
                 <p>26 мар — 29 мар</p>
               </div>
-              <button type="button">Изменить</button>
+              <button class="user-plans__button" type="button">Изменить</button>
             </li>
             <li class="user-plans__item">
-              <div class="user-plans__number">2</div>
               <div class="user-plans__countries">Таиланд, Индонезия</div>
               <div class="user-plans__info">
                 <p>1 попутчик</p>
                 <p>1 июл — 15 июл</p>
               </div>
-              <button type="button">Изменить</button>
+              <button class="user-plans__button" type="button">Изменить</button>
             </li>
           </ul>
         </div>
@@ -128,9 +126,9 @@
           <form class="add-plan__form" action="https://echo.htmlacademy.ru">
           <h2>Добавить план:</h2>
           <div class="add-plan__dots">
-            <button class="add-plan__dot" type="button">Шаг 1</button>
-            <button class="add-plan__dot" type="button">Шаг 2</button>
-            <button class="add-plan__dot" type="button">Шаг 3</button>
+            <button class="add-plan__dot add-plan__dot--active" type="button" aria-label="Шаг 1"></button>
+            <button class="add-plan__dot" type="button" aria-label="Шаг 2"></button>
+            <button class="add-plan__dot" type="button" aria-label="Шаг 3"></button>
           </div>
           <div class="add-plan__step">
             <div class="add-plan__caption">
@@ -224,7 +222,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button" href="#">Следующий шаг</a>
+            <a class="add-plan__button" href="#">Следующий шаг</a>
           </div>
           <div class="add-plan__step">
             <div class="add-plan__caption">
@@ -262,8 +260,8 @@
             <div class="add-plan__field">
               <button class="add-plan__country add-plan__country--new">Добавить страну</button>
             </div>
-            <a class="button" href="#">Следующий шаг</a>
-            <a class="button" href="#">На шаг назад</a>
+            <a class="add-plan__button add-plan__button--accent" href="#">Следующий шаг</a>
+            <a class="add-plan__button" href="#">На шаг назад</a>
           </div>
           <div class="add-plan__step">
             <div class="add-plan__caption">
@@ -281,8 +279,8 @@
                 <textarea class="add-plan__textarea" name="activities" id="add-plan-activity-2" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </div>
             </div>
-            <button type="submit">Отправить</button>
-            <a class="button" href="#">На шаг назад</a>
+            <button class="add-plan__button add-plan__button--accent" type="submit">Отправить</button>
+            <a class="add-plan__button" href="#">На шаг назад</a>
           </div>
         </form>
         </div>

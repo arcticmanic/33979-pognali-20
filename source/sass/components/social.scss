@@ -21,6 +21,6 @@
     width: 45px;
     height: 45px;
     background-color: var(--basic-yellow);
-    border-radius: 9999px;
+    @include bordered;
   }
 }

@@ -13,6 +13,10 @@
   margin: auto;
 }
 
+@mixin bordered {
+  border-radius: 9999px;
+}
+
 @mixin wrapper($padding: 25px, $padding-tablet: 40px, $padding-desktop: 60px) {
   padding-left: $padding;
   padding-right: $padding;
