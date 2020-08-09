@@ -1,5 +1,10 @@
 .auth {
+  display: none;
+  margin: 0 auto 28px;
 
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 }
 
 .auth__list {
@@ -10,7 +15,37 @@
 
 .auth__item {
   a {
-    color: var(--basic-blue-dark);
+    border-radius: 25px;
     background-color: var(--basic-yellow);
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--login {
+    a {
+      background-color: var(--basic-yellow);
+      color: var(--basic-blue-dark);
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding: 12px 28px 8px;
+      min-width: 190px;
+    }
+  }
+
+  &:nth-child(3n+1) {
+    a {
+      background-color: var(--special-orange);
+    }
+  }
+
+  &:nth-child(3n+2) {
+    a {
+      background-color: var(--special-yellow-dark);
+    }
   }
 }

@@ -6,5 +6,23 @@
 .promo__wrapper {
   @include wrapper;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.promo__review {
+  margin-bottom: 29px;
+  padding-left: 20px;
+}
+
+.promo__review-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 18px;
+}
+
+.promo__review-author {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
 }
