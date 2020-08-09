@@ -1,10 +1,12 @@
 .user-plans {
-  h2 {
-    color: var(--basic-blue);
 
-    &:first-child {
-      margin-top: 0;
-    }
+}
+
+.user-plans__heading {
+  color: var(--basic-blue);
+
+  &:first-child {
+    margin-top: 0;
   }
 }
 
