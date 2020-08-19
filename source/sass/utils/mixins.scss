@@ -29,7 +29,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: $padding-desktop;
-    padding-right: $padding-tablet;
+    padding-right: $padding-desktop;
     max-width: 1440px;
   }
 }

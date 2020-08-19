@@ -1,0 +1,79 @@
+.coutry-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--basic-white);
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.coutry-card__image {
+  img {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.coutry-card__content {
+  background-color: var(--basic-white);
+  padding: 24px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    flex-direction: column;
+  }
+}
+
+.coutry-card__flag {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: -12px;
+
+  @media (min-width: $tablet-width) {
+    top: 20px;
+    right: -18px;
+  }
+}
+
+.coutry-card__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  margin-bottom: 5px;
+}
+
+.coutry-card__slogan {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  opacity: 0.3;
+  width: 100%;
+}
+
+.coutry-card__counter {
+  color: var(--basic-blue-dark);
+  opacity: 0.3;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}

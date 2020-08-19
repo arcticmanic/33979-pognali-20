@@ -1,0 +1,333 @@
+.search {
+  background: var(--basic-yellow);
+  border-radius: 20px;
+  padding: 26px 25px 22px;
+  margin-bottom: 28px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 37px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+  }
+
+  .page-main__subheading {
+    color: var(--basic-blue);
+    margin-top: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 76px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 34px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+.search__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+}
+
+.search__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--search-line);
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    &::before {
+      top: -38px;
+      position: absolute;
+    }
+
+    &:not(:first-of-type):not(:last-of-type) {
+      &::before {
+        display: none;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 60px;
+
+      &::before {
+        order: 1;
+        top: auto;
+        bottom: -38px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.search__legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-blue);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+
+  span {
+    @media (max-width: $mobile-width-only), (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 105px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 27px;
+    margin-right: 0;
+  }
+}
+
+.search__reveal {
+  display: none;
+
+  @media (max-width: $mobile-width-only), (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.search__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
+
+.search__checkbox {
+  margin-bottom: 8px;
+  width: 100%;
+
+  label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--basic-black);
+  }
+
+  input {
+    + label {
+      &::before {
+        content: "";
+        margin-right: 9px;
+        width: 18px;
+        height: 18px;
+        background-color: var(--basic-white);
+        border-radius: 4px;
+        margin-bottom: 4px;
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          background-color: var(--basic-black);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.search__radio {
+  label {
+    background-color: var(--basic-white);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include bordered;
+  }
+}
+
+.search__level {
+  position: relative;
+  flex-grow: 1;
+}
+
+.range-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.range-input__fieldset {
+  display: flex;
+  position: relative;
+  border: 1px solid var(--search-border);
+  border-radius: 4px;
+  background-color: var(--basic-white);
+  overflow: hidden;
+  margin-bottom: 24px;
+
+  &::before {
+    content: '';
+    order: 1;
+    width: 1px;
+    flex-shrink: 0;
+    background: linear-gradient(var(--search-border) 0%, var(--search-border) 33%, var(--basic-white) 33%, var(--basic-white) 67%, var(--search-border) 67%, var(--search-border) 100%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+    width: 21px;
+    height: 1px;
+    background-color: var(--search-border);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.range-input__field {
+  input {
+    width: 100%;
+
+    height: 35px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  &:last-child {
+    order: 1;
+  }
+}
+
+.range-input__scale {
+  min-width: 190px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.range-input__bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--basic-blue-20);
+  position: relative;
+}
+
+.range-input__bar-inner {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 2px;
+  background-color: var(--basic-blue);
+  display: flex;
+  justify-content: space-between;
+      align-items: center;
+}
+
+.range-input__pin {
+  width: 10px;
+  height: 10px;
+  @include bordered;
+  background-color: var(--basic-blue);
+}
+
+.search__button {
+  background-color: var(--basic-white);
+  border: none;
+  width: 100%;
+  min-height: 41px;
+  @include bordered;
+  font-size: 17px;
+  line-height: 17px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--basic-blue-dark);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+  }
+}

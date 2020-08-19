@@ -1,0 +1,14 @@
+.button {
+  background-color: var(--basic-yellow);
+  border: none;
+  padding: 20px 32px;
+  min-height: 62px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--basic-blue);
+  display: flex;
+  align-items: center;
+}

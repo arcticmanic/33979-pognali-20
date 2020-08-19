@@ -5,10 +5,16 @@
   color: var(--basic-white);
   display: flex;
   flex-direction: column;
+  z-index: 10;
+  position: relative;
 
-  // @media (min-width: $tablet-width) {
-  //   background-color: var(--basic-white);
-  // }
+  @media (min-width: $tablet-width) {
+    background-color: var(--basic-blue-dark3);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: var(--basic-blue-dark);
+  }
 }
 
 .page-header__wrapper {

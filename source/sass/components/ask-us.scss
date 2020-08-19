@@ -1,6 +1,14 @@
 .ask-us {
   background-color: var(--basic-blue-dark2);
   color: var(--basic-white);
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 20px;
+  margin-bottom: -30px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .ask-us__wrapper {

@@ -11,9 +11,12 @@
 
 // Components
 
+@import 'components/button.scss';
+@import 'components/heading.scss';
 @import 'components/main-nav.scss';
 @import 'components/auth.scss';
 @import 'components/countries.scss';
+@import 'components/country-card.scss';
 @import 'components/add-profile.scss';
 @import 'components/users.scss';
 @import 'components/catalog.scss';
@@ -28,3 +31,7 @@
 @import 'components/address.scss';
 @import 'components/level.scss';
 @import 'components/add-plan.scss';
+@import 'components/filter.scss';
+@import 'components/search.scss';
+@import 'components/modal.scss';
+@import 'components/map.scss';
