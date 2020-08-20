@@ -1,12 +1,125 @@
 .users {
   background-color: var(--basic-blue-dark2);
   color: var(--basic-white);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: -30px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 4;
+  padding-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
 }
 
 .users__wrapper {
   @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 113 132'%3E%3Cpath fill='%23141B3B' d='M0 0h93c11.046 0 20 8.9543 20 20v92c0 11.046-8.954 20-20 20H0V0z'/%3E%3C/svg%3E"),
+    url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png");
+  background-position: top left, top right, top 300px left;
+  background-size: 113px 132px, 143px 143px, 71px 71px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 212 212'%3E%3Crect width='212' height='212' fill='%23141B3B' rx='20'/%3E%3C/svg%3E"),
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-position: top left, top 300px left, top right;
+    background-size: 212px 212px, 143px 143px, 285px 285px;
+    background-origin: content-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 600px;
+    padding-bottom: 54px;
+
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 212 212'%3E%3Crect width='212' height='212' fill='%23141B3B' rx='20'/%3E%3C/svg%3E"),
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-position: top left, top 100px left 300px, bottom -54px left 100px;
+    background-size: 212px 212px, 143px 143px, 285px 285px;
+  }
 }
 
 .users__list {
   @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
+
+.users__item {
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    margin-bottom: 0;
+    margin-right: 50px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.users__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.users__all {
+  width: 100%;
+
+  &--top {
+    display: none;
+    margin-top: auto;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &--bottom {
+    @media (min-width: $tablet-width) {
+      margin-top: 81px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
 }

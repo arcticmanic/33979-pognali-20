@@ -1,11 +1,164 @@
 .add-profile {
-
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--basic-blue-light);
+  padding-bottom: 20px;
+  margin-bottom: -30px;
+  padding-top: 100px;
+  z-index: 3;
+  position: relative;
 }
 
 .add-profile__wrapper {
   @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .add-profile__list {
   @include reset-list;
+  width: 100%;
+  position: relative;
+  counter-reset: section;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -30px;
+      z-index: -1;
+      background-color: var(--grey-light3);
+      border-radius: 20px;
+      width: 20%;
+      height: 110%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    flex-grow: 1;
+  }
+}
+
+.add-profile__item {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::after {
+    @include bordered;
+    content: counter(section);
+    counter-increment: section;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--special-orange);
+  }
+
+  &:last-child {
+    .add-profile__content {
+      border-bottom: 1px solid var(--grey-light2);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    align-items: stretch;
+    margin-bottom: 0;
+
+    &::after {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.add-profile__content {
+  flex-grow: 1;
+  border-top: 1px solid var(--grey-light2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    order: 1;
+    align-items: center;
+  }
+}
+
+.add-profile__price {
+  background-color: var(--grey-light3);
+}
+
+.add-profile__subheading {
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.add-profile__thumbnail {
+  margin-left: auto;
+
+  img {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.add-profile__show {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-blue2);
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    @include bordered;
+    content: "";
+    display: block;
+    width: 68px;
+    height: 68px;
+    background-color: var(--grey-light3);
+    margin-right: 10px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
 }

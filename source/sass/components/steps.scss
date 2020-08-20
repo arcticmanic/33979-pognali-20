@@ -1,22 +1,115 @@
 .steps {
-
+  @media (min-width: $desktop-width) {
+    overflow: hidden;
+  }
 }
 
 .steps__list {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  counter-reset: section;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-right: -16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -108px;
+  }
 }
 
 .steps__item {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
-  background-color: var(--special-orange);
+  background-color: var(--basic-yellow);
+  padding: 22px 24px 40px;
+  border-radius: 10px;
+  margin-top: -16px;
+
+  &:nth-child(4n+1) {
+    background-color: var(--special-orange);
+  }
+
+  &:nth-child(4n+2) {
+    background-color: var(--special-orange-light);
+  }
+
+  &:nth-child(4n+3) {
+    background-color: var(--special-yellow-dark);
+  }
 
   a {
     color: var(--basic-blue-dark);
     font-weight: 700;
     font-size: 18px;
     line-height: 18px;
+  }
+
+  &::after {
+    counter-increment: section;
+    content: counter(section);
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &:last-child {
+      padding: 22px 24px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    flex-direction: column;
+    padding: 22px 24px;
+    min-height: 140px;
+    margin-top: 0;
+
+    &:nth-child(2n+1) {
+      margin-right: -16px;
+    }
+
+    &:nth-child(2n) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &::after {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 107px;
+    width: 25%;
+    margin-right: -36px;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 22px 64px 22px 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: -36px;
+    }
+
+    &:nth-child(2n) {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &::after {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }
