@@ -78,6 +78,7 @@
 }
 
 .user-card__button {
+  @include bordered;
   background-color: var(--basic-yellow);
   border: none;
   color: var(--basic-blue-dark);
@@ -88,7 +89,6 @@
   font-family: inherit;
   width: 100%;
   min-height: 40px;
-  @include bordered;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -36,11 +36,11 @@
 }
 
 .add-plan__dot {
+  @include bordered;
   background-color: var(--basic-blue);
   opacity: 0.3;
   width: 5px;
   height: 5px;
-  @include bordered;
   border: none;
   padding: 0;
 
