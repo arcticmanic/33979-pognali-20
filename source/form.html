@@ -73,7 +73,6 @@
       <div class="heading">
         <div class="heading__wrapper">
           <h1 class="heading__inner">Направления</h1>
-          <a class="heading__return" href="#">На главную <img src="img/return.svg" width="32" height="16" alt="Иконка: вернуться на главную"></a>
         </div>
       </div>
 
@@ -94,35 +93,37 @@
             #бургер #бар #футбол #концерт
             #крафт
           </div>
-          <div class="user-info__means">
+          <div class="user-info__transport">
             <div class="user-info__caption">Транспорт</div>
-            <img src="img/plane.svg" width="21" height="21" alt="Иконка самолета">
-            <img src="img/bus.svg" width="21" height="21" alt="Иконка автобуса">
-            <img src="img/bike.svg" width="21" height="21" alt="Иконка велосипеда">
-            <img src="img/run.svg" width="21" height="21" alt="Иконка бегущего человека">
+            <div class="user-info__transport-list">
+              <img src="img/plane.svg" width="21" height="21" alt="Иконка самолета">
+              <img src="img/bus.svg" width="21" height="21" alt="Иконка автобуса">
+              <img src="img/bike.svg" width="21" height="21" alt="Иконка велосипеда">
+              <img src="img/run.svg" width="21" height="21" alt="Иконка бегущего человека">
+            </div>
           </div>
         </div>
       </section>
 
       <section class="user-plans">
         <div class="user-plans__wrapper">
-          <h2 class="page-main__subheading user-plans__heading">Мои планы:</h2>
+          <h2 class="user-plans__heading">Мои планы:</h2>
           <ul class="user-plans__list">
             <li class="user-plans__item">
               <div class="user-plans__countries">Франция, Италия</div>
               <div class="user-plans__info">
-                <p>3 попутчика</p>
-                <p>26 мар — 29 мар</p>
+                <p class="user-plans__quantity">3 попутчика</p>
+                <p class="user-plans__date">26 мар &mdash; 29 мар</p>
+                <button class="user-plans__button" type="button">Изменить</button>
               </div>
-              <button class="user-plans__button" type="button">Изменить</button>
             </li>
             <li class="user-plans__item">
               <div class="user-plans__countries">Таиланд, Индонезия</div>
               <div class="user-plans__info">
-                <p>1 попутчик</p>
-                <p>1 июл — 15 июл</p>
+                <p class="user-plans__quantity">1 попутчик</p>
+                <p class="user-plans__date">1 июл &mdash; 15 июл</p>
+                <button class="user-plans__button" type="button">Изменить</button>
               </div>
-              <button class="user-plans__button" type="button">Изменить</button>
             </li>
           </ul>
         </div>
@@ -131,7 +132,7 @@
       <div class="add-plan">
         <div class="add-plan__wrapper">
           <form class="add-plan__form" action="https://echo.htmlacademy.ru">
-            <h2 class="page-main__subheading add-plan__heading">Добавить план:</h2>
+            <h2 class="add-plan__heading">Добавить план:</h2>
             <div class="add-plan__dots">
               <button class="add-plan__dot add-plan__dot--active" type="button" aria-label="Шаг 1"></button>
               <button class="add-plan__dot" type="button" aria-label="Шаг 2"></button>
@@ -142,36 +143,60 @@
                 Шаг 1.<br>
                 Даты пребывания
               </div>
-              <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <div class="add-plan__field">
-                <label for="add-plan-companions" class="add-plan__label">Ищу попутчиков:</label>
-                <div class="add-plan__measure">чел.</div>
-                <input type="number" name="companions" id="add-plan-companions">
+              <div class="add-plan__text">
+                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </div>
-              <div class="add-plan__field">
-                <label for="add-plan-duration" class="add-plan__label">Длительность:</label>
-                <div class="add-plan__measure">дн.</div>
-                <input type="number" name="duration" id="add-plan-duration">
-              </div>
-              <div class="add-plan__field">
-                <input class="visually-hidden" type="checkbox" id="add-plan-children" name="children" value="true">
-                <label for="add-plan-children">Можно с детьми</label>
+              <div class="add-plan__fields">
+                <div class="add-plan__field">
+                  <label class="add-plan__label" for="add-plan-companions">Ищу попутчиков:</label>
+                  <div class="add-plan__measure">чел.</div>
+                  <div class="add-plan__input-count">
+                    <button class="add-plan__control" type="button">
+                      <img src="img/qty-minus-mobile.svg" width="14" height="1" alt="">
+                    </button>
+                    <input class="add-plan__input" type="number" name="companions" id="add-plan-companions">
+                    <button class="add-plan__control" type="button">
+                      <img src="img/qty-plus-mobile.svg" width="14" height="14" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="add-plan__field">
+                  <label class="add-plan__label" for="add-plan-duration">Длительность:</label>
+                  <div class="add-plan__measure">дн.</div>
+                  <div class="add-plan__input-count">
+                    <button class="add-plan__control" type="button">
+                      <img src="img/qty-minus-mobile.svg" width="14" height="1" alt="">
+                    </button>
+                    <input class="add-plan__input" type="number" name="duration" id="add-plan-duration">
+                    <button class="add-plan__control" type="button">
+                      <img src="img/qty-plus-mobile.svg" width="14" height="14" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="add-plan__field add-plan__field--checkbox">
+                  <input class="visually-hidden" type="checkbox" id="add-plan-children" name="children" value="true">
+                  <label for="add-plan-children">Можно с детьми</label>
+                </div>
               </div>
               <div class="add-plan__calendar calendar">
                 <div class="calendar__year">
                   <div class="calendar__caption">Март 2019</div>
-                  <button type="button" class="calendar__arrow calendar__arrow--left">Назад</button>
-                  <button type="button" class="calendar__arrow calendar__arrow--right">Вперед</button>
+                  <button type="button" class="calendar__arrow calendar__arrow--left">
+                    <img src="img/month-arrow-left.svg" width="9" height="18" alt="">
+                  </button>
+                  <button type="button" class="calendar__arrow calendar__arrow--right">
+                    <img src="img/month-arrow-right.svg" width="9" height="18" alt="">
+                  </button>
                 </div>
                 <table class="calendar__month">
                   <tr class="calendar__week">
-                    <td class="calendar__day calendar__day--of-the-week">П</td>
-                    <td class="calendar__day calendar__day--of-the-week">В</td>
-                    <td class="calendar__day calendar__day--of-the-week">С</td>
-                    <td class="calendar__day calendar__day--of-the-week">Ч</td>
-                    <td class="calendar__day calendar__day--of-the-week">П</td>
-                    <td class="calendar__day calendar__day--of-the-week calendar__day--off">С</td>
-                    <td class="calendar__day calendar__day--of-the-week calendar__day--off">В</td>
+                    <th class="calendar__day calendar__day--of-the-week">П</th>
+                    <th class="calendar__day calendar__day--of-the-week">В</th>
+                    <th class="calendar__day calendar__day--of-the-week">С</th>
+                    <th class="calendar__day calendar__day--of-the-week">Ч</th>
+                    <th class="calendar__day calendar__day--of-the-week">П</th>
+                    <th class="calendar__day calendar__day--of-the-week calendar__day--off">С</th>
+                    <th class="calendar__day calendar__day--of-the-week calendar__day--off">В</th>
                   </tr>
                   <tr>
                     <td class="calendar__day calendar__day--past">23</td>
@@ -229,7 +254,7 @@
                   </tr>
                 </table>
               </div>
-              <a class="add-plan__button" href="#">Следующий шаг</a>
+              <a class="add-plan__button add-plan__button--accent" href="#">Следующий шаг</a>
             </div>
             <div class="add-plan__step">
               <div class="add-plan__caption">
@@ -243,8 +268,12 @@
                   <option value="Босния и герцеговина">Босния и Герцеговина</option>
                   <option value="Чехия">Чехия</option>
                 </select>
-                <label for="add-plan-country-1"></label>
-                <button class="add-plan__delete">Удалить</button>
+                <label class="add-plan__label-country" for="add-plan-country-1">
+                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                </label>
+                <button class="add-plan__delete">
+                  <img src="img/close.svg" width="9" height="9" alt="">
+                </button>
               </div>
               <div class="add-plan__field">
                 <select class="add-plan__country" name="country" id="add-plan-country-2">
@@ -252,8 +281,12 @@
                   <option value="Босния и герцеговина">Босния и Герцеговина</option>
                   <option value="Чехия">Чехия</option>
                 </select>
-                <label for="add-plan-country-2"></label>
-                <button class="add-plan__delete">Удалить</button>
+                <label class="add-plan__label-country" for="add-plan-country-2">
+                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                </label>
+                <button class="add-plan__delete">
+                  <img src="img/close.svg" width="9" height="9" alt="">
+                </button>
               </div>
               <div class="add-plan__field">
                 <select class="add-plan__country" name="country" id="add-plan-country-3">
@@ -261,8 +294,10 @@
                   <option value="Босния и герцеговина">Босния и Герцеговина</option>
                   <option value="Чехия">Чехия</option>
                 </select>
-                <label for="add-plan-country-3"></label>
-                <button class="add-plan__delete">Удалить</button>
+                <label class="add-plan__label-country" for="add-plan-country-3"></label>
+                <button class="add-plan__delete">
+                  <img src="img/close.svg" width="9" height="9" alt="">
+                </button>
               </div>
               <div class="add-plan__field">
                 <button class="add-plan__country add-plan__country--new">Добавить страну</button>
@@ -278,12 +313,12 @@
               <p>Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <div class="add-plan__activity">
                 <div class="add-plan__field">
-                  <label class="add-plan__label-with-country" for="add-plan-activity-1">Босния и Герцеговина</label>
-                  <textarea class="add-plan__textarea" name="activities" id="add-plan-activity-1" cols="30" rows="10"></textarea>
+                  <label class="add-plan__label-with-country" for="add-plan-activity-1">Босния и Герцеговина <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии"></label>
+                  <textarea class="add-plan__textarea" name="activities" id="add-plan-activity-1" cols="30" rows="10" placeholder="План действий"></textarea>
                 </div>
                 <div class="add-plan__field">
-                  <label class="add-plan__label-with-country" for="add-plan-activity-2">Чехия</label>
-                  <textarea class="add-plan__textarea" name="activities" id="add-plan-activity-2" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <label class="add-plan__label-with-country" for="add-plan-activity-2">Чехия <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии"></label>
+                  <textarea class="add-plan__textarea" name="activities" id="add-plan-activity-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </div>
               </div>
               <button class="add-plan__button add-plan__button--accent" type="submit">Отправить</button>
