@@ -20,4 +20,29 @@
   line-height: 22px;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: var(--basic-yellow);
+  }
+
+  &--dark {
+    a {
+      color: var(--basic-blue-dark2);
+    }
+  }
+}
+
+.phone__icon,
+.email__icon {
+  @include bordered;
+  width: 45px;
+  height: 45px;
+  background-color: var(--pin-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 16px;
 }

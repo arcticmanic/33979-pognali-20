@@ -6,9 +6,11 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height: 140px;
   }
 }
 
@@ -24,11 +26,14 @@
 
 .coutry-card__content {
   background-color: var(--basic-white);
-  padding: 24px;
+  padding: 10px 25px;
+  min-height: 89px;
   border-radius: 10px;
   position: relative;
   margin-top: -10px;
   display: flex;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   justify-content: space-between;
 
@@ -42,7 +47,7 @@
   display: flex;
   align-items: flex-start;
   position: absolute;
-  top: -12px;
+  top: -14px;
 
   @media (min-width: $tablet-width) {
     top: 20px;
@@ -55,7 +60,6 @@
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-bottom: 5px;
 }
 
 .coutry-card__slogan {
