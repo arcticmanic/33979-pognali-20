@@ -1,18 +1,35 @@
 .user-plans__heading {
   color: var(--basic-blue);
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 29px;
 
   &:first-child {
     margin-top: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 48px;
+  }
 }
 
 .user-plans__wrapper {
-  @include wrapper;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  @include wrapper(25px, 75px, 124px);
   background-color: var(--special-blue-light);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  padding-bottom: 59px;
+  padding-top: 28px;
+  margin-bottom: -40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 118px;
+    margin-bottom: -60px;
+  }
 }
 
 .user-plans__list {
@@ -21,24 +38,33 @@
 }
 
 .user-plans__item {
+  min-height: 154px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   position: relative;
   color: var(--basic-blue);
   background-color: var(--basic-white);
   border-radius: 10px;
-  padding: 24px;
+  padding: 24px 25px 23px;
   margin-bottom: 10px;
 
-  &::before {
-    counter-increment: section;
-    content: counter(section) ". ";
-    position: absolute;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 700;
+  @media (min-width: $tablet-width) {
+    align-items: stretch;
+    min-height: 154px;
+    padding: 40px 0 0;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 98px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 42px;
   }
 }
 
@@ -47,7 +73,43 @@
   line-height: 16px;
   font-weight: 700;
   margin-bottom: 20px;
-  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-right: 5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    padding: 0 25px;
+
+    &::before {
+      font-size: 20px;
+      line-height: 20px;
+      order: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 25px 0 0;
+    margin: 0;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+    &::before {
+      order: 0;
+      margin-right: 36px;
+    }
+  }
 }
 
 .user-plans__info {
@@ -55,14 +117,55 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  margin-bottom: 24px;
 
-  p {
-    margin: 0 0 5px 0;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 25px 15px;
+    border-top: 1px solid var(--card-border);
+  }
 
-    &:last-child {
-      margin: 0;
-    }
+  @media (min-width: $desktop-width) {
+    align-content: center;
+    min-width: 50%;
+    border: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 155px 1fr auto;
+    column-gap: 20px;
+  }
+}
+
+.user-plans__quantity {
+  margin: 0 0 5px 0;
+  letter-spacing: 0.06em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.user-plans__date {
+  margin: 0;
+  letter-spacing: 0.06em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -70,10 +173,21 @@
   border: none;
   padding: 0;
   background-color: transparent;
-
+  margin-top: 24px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-weight: 500;
   font-family: inherit;
   color: var(--basic-black-30);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-shrink: 0;
+  }
 }

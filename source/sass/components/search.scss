@@ -221,7 +221,7 @@
 .range-input__fieldset {
   display: flex;
   position: relative;
-  border: 1px solid var(--search-border);
+  border: 1px solid var(--border-grey);
   border-radius: 4px;
   background-color: var(--basic-white);
   overflow: hidden;
@@ -232,7 +232,7 @@
     order: 1;
     width: 1px;
     flex-shrink: 0;
-    background: linear-gradient(var(--search-border) 0%, var(--search-border) 33%, var(--basic-white) 33%, var(--basic-white) 67%, var(--search-border) 67%, var(--search-border) 100%);
+    background: linear-gradient(var(--border-grey) 0%, var(--border-grey) 33%, var(--basic-white) 33%, var(--basic-white) 67%, var(--border-grey) 67%, var(--border-grey) 100%);
   }
 
   &::after {
@@ -244,7 +244,7 @@
     margin-top: -1px;
     width: 21px;
     height: 1px;
-    background-color: var(--search-border);
+    background-color: var(--border-grey);
   }
 
   @media (min-width: $tablet-width) {
