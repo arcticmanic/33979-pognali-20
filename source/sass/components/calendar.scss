@@ -1,5 +1,10 @@
 .calendar {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 47px;
+  }
 }
 
 .calendar__year {
@@ -46,16 +51,54 @@
 
 .calendar__day {
   border: 1px solid var(--calendar-border);
-  padding: 4px 7px;
-  color: var(--special-grey-30);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  width: 33px;
+  height: 32px;
+  color: var(--basic-blue);
+  background-color: var(--background-color);
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+    height: 69px;
+  }
+
+  &:hover {
+    outline: 2px solid var(--calendar-day-off);
+    outline-offset: -2px;
+
+    @media (min-width: $tablet-width) {
+      outline: 3px solid var(--calendar-day-off);
+      outline-offset: -3px;
+    }
+  }
 
   &--of-the-week {
     font-weight: normal;
     border: none;
     color: var(--special-grey);
+    background-color: var(--basic-white);
+
+    @media (max-width: $mobile-width-only) {
+      span {
+        display: none;
+      }
+    }
   }
 
   &--off {
     color: var(--calendar-day-off);
+  }
+
+  &--past {
+    background-color: var(--basic-white);
+    color: var(--special-grey-30);
+    font-weight: normal;
+  }
+
+  &--selected {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
   }
 }
