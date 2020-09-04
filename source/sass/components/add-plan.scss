@@ -182,22 +182,6 @@
       }
     }
 
-    &:hover {
-
-    }
-
-    &:active {
-
-    }
-
-    &:focus {
-
-    }
-
-    &:disabled {
-
-    }
-
     &:checked {
       + label {
         &::after {
@@ -510,7 +494,7 @@
       right: 0;
       width: 36px;
       height: 100%;
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+      background: linear-gradient(90deg, transparent 0%, var(--basic-white) 50%);
     }
   }
 }
@@ -540,7 +524,7 @@
     margin-bottom: 50px;
     position: relative;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       right: 142px;
@@ -548,8 +532,7 @@
       margin-top: -42px;
       height: 130%;
       width: 1px;
-      background:
-      linear-gradient(180deg, var(--grey-light2) 0%, var(--grey-light2) 80%, var(--basic-white) 100%);
+      background: linear-gradient(180deg, var(--grey-light2) 0%, var(--grey-light2) 80%, var(--basic-white) 100%);
     }
   }
 }

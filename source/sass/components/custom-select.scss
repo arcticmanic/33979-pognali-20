@@ -149,12 +149,12 @@
   line-height: 22px;
   color: var(--special-grey);
   background-color: var(--basic-white);
-  box-shadow: 0px 2px 16px var(--select-shadow);
+  box-shadow: 0 2px 16px var(--select-shadow);
 
   &--open {
     display: block;
     position: absolute;
-    top: 0px;
+    top: 0;
   }
 }
 
@@ -215,8 +215,8 @@
 
   tr {
     &:first-child {
-        td {
-          border-top: none;
+      td {
+        border-top: none;
       }
     }
 
