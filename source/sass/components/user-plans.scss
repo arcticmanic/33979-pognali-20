@@ -1,3 +1,8 @@
+.user-plans {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
 .user-plans__heading {
   color: var(--basic-blue);
   font-size: 24px;
@@ -13,6 +18,7 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 48px;
+    margin-left: 6px;
   }
 }
 
@@ -26,9 +32,15 @@
   margin-bottom: -40px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 57px;
+    padding-top: 54px;
     padding-bottom: 118px;
     margin-bottom: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
   }
 }
 
@@ -64,7 +76,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    padding: 20px 42px;
+    padding: 22px 42px 20px;
   }
 }
 
@@ -145,7 +157,7 @@
     margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
   }
 
   @media (min-width: $desktop-width) {
@@ -161,7 +173,7 @@
     margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
   }
 
   @media (min-width: $desktop-width) {
@@ -184,7 +196,7 @@
     margin-top: 0;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
   }
 
   @media (min-width: $desktop-width) {

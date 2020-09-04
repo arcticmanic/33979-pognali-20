@@ -1,9 +1,14 @@
-.coutry-card {
+.country-card {
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--basic-white);
   display: flex;
   flex-direction: column;
+  min-height: 188px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+  }
 
   @media (min-width: $tablet-width) {
     border-radius: 20px;
@@ -12,72 +17,127 @@
     justify-content: space-between;
     min-height: 140px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 559px;
+  }
 }
 
-.coutry-card__image {
+.country-card__image {
   img {
     display: block;
   }
 
   @media (min-width: $tablet-width) {
     order: 1;
+    width: 185px;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }
 
-.coutry-card__content {
+.country-card__content {
   background-color: var(--basic-white);
-  padding: 10px 25px;
+  padding: 26px 15px 3px 24px;
   min-height: 89px;
   border-radius: 10px;
   position: relative;
-  margin-top: -10px;
+  margin-top: -11px;
   display: flex;
-  align-items: center;
-  align-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     flex-direction: column;
+    margin-top: 0;
+    padding: 30px 15px 22px 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px 15px 22px 29px;
   }
 }
 
-.coutry-card__flag {
+.country-card__flag {
   display: flex;
   align-items: flex-start;
   position: absolute;
   top: -14px;
+  width: 35px;
+  height: 24px;
 
   @media (min-width: $tablet-width) {
-    top: 20px;
-    right: -18px;
+    top: 17px;
+    right: -36px;
+    width: 70px;
+    height: 47px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 23px;
+    right: -33px;
   }
 }
 
-.coutry-card__title {
+.country-card__title {
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+  width: 70%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
-.coutry-card__slogan {
+.country-card__slogan {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   opacity: 0.3;
   width: 100%;
+  margin-top: 2px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
 }
 
-.coutry-card__counter {
+.country-card__counter {
   color: var(--basic-blue-dark);
   opacity: 0.3;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  margin-top: 3px;
+  margin-left: 3px;
+
+  svg {
+    width: 11px;
+    fill: var(--basic-blue-dark2);
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     order: 1;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: auto;
+
+    svg {
+      width: 18px;
+    }
   }
 }
