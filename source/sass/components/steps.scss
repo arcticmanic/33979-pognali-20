@@ -7,12 +7,14 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin-right: -16px;
+    align-self: center;
+    width: 688px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 0;
+    margin-left: -35px;
     justify-content: flex-start;
+    width: auto;
   }
 }
 

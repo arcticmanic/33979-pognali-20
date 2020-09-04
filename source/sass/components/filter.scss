@@ -1,3 +1,7 @@
+.filter {
+  margin-bottom: 21px;
+}
+
 .filter__wrapper {
   @include wrapper(25px, 73px, 80px);
   padding-top: 33px;
@@ -5,7 +9,7 @@
   background-color: var(--grey-light3);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding-bottom: 28px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: column;
 

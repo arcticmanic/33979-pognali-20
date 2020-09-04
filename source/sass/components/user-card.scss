@@ -1,6 +1,6 @@
 .user-card {
   background-color: var(--basic-white);
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,12 @@
   text-align: center;
   box-shadow: 0 2px 4px var(--card-shadow);
   max-width: 285px;
+  min-height: 428px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 483px;
+    border-radius: 20px;
+  }
 }
 
 .user-card__image {
@@ -20,13 +26,18 @@
 }
 
 .user-card__name {
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 21px;
+  line-height: 21px;
   font-weight: 700;
   color: var(--basic-blue);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 22px;
+
     br {
       display: none;
     }
@@ -36,12 +47,26 @@
 .user-card__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: -10px;
-  padding: 0 20px 22px;
+  padding: 0 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -11px;
+  }
 }
 
 .user-card__tags {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 18px;
+  width: 80%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    width: auto;
+    margin-bottom: 22px;
+  }
 
   a {
     color: var(--special-grey);
@@ -49,31 +74,71 @@
 }
 
 .user-card__level {
+  @include bordered;
+  position: absolute;
+  color: var(--basic-white);
+  background-color: var(--basic-black-60);
+  top: 18px;
+  left: 22px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  position: absolute;
-  top: 17px;
-  left: 17px;
-  color: var(--basic-white);
-  background-color: var(--basic-black-60);
 
-  @media (min-width: $tablet-width) {
-    .user-card__label {
-      display: none;
-    }
+  &::after {
+    content: "";
+    height: 1px;
+    width: 30px;
+    background-color: var(--basic-white);
+    opacity: 0.3;
+    margin: 0 0 2px;
+  }
+}
+
+.user-card__level-number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: -2px;
+}
+
+.user-card__level-caption {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  order: 1;
+}
+
+.user-card__level-xp {
+  color: var(--special-orange);
+  position: absolute;
+
+  svg {
+    display: block;
+  }
+
+  .xp-ring__circle {
+    stroke-dasharray: 240, 240;
   }
 }
 
 .user-card__flags {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   img {
     margin: 0 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
   }
 }
 
@@ -96,4 +161,48 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 13px;
+}
+
+.user-card__transport {
+  margin-bottom: 7px;
+}
+
+.user-card__transport-list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-card__transport-item {
+  @include bordered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21px;
+  background-color: var(--basic-white);
+  color: var(--basic-blue);
+  opacity: 0.15;
+  margin: 0 7px;
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
+
+  &--active {
+    opacity: 1;
+    color: var(--card-transport-color);
+  }
+}
+
+.user-card__status {
+  @include bordered;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--status-color);
+  top: 9px;
+  left: -16px;
 }

@@ -10,19 +10,6 @@
   }
 }
 
-.page-main__subheading {
-  color: var(--special-orange);
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 700;
-  margin-bottom: 19px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 45px;
-    line-height: 45px;
-  }
-}
-
 .page-main__text {
   color: var(--special-grey);
 }

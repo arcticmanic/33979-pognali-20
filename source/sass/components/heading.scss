@@ -1,5 +1,3 @@
-$heading-offset: 11px;
-
 .heading {
   background-color: var(--basic-blue-dark);
   padding-top: 12px;
@@ -15,6 +13,9 @@ $heading-offset: 11px;
 
   @media (min-width: $desktop-width) {
     background-color: var(--basic-blue-dark);
+    padding-top: 113px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 }
 
@@ -34,27 +35,27 @@ $heading-offset: 11px;
     height: 5px;
     background: var(--special-orange);
     border-radius: 4px;
-    bottom: #{-$heading-offset - 2px};
+    bottom: -2px;
   }
 
   @media (min-width: $tablet-width) {
-    $heading-offset: 88px;
     font-size: 60px;
     line-height: 60px;
+    padding-bottom: 68px;
+
+    &::after {
+      height: 8px;
+      bottom: -4px;
+    }
   }
 }
 
 .heading__wrapper {
-  @include wrapper;
+  @include wrapper(25px, 40px, 124px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 11px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: $heading-offset;
-  }
 }
 
 .heading__return {

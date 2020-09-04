@@ -143,7 +143,6 @@ $promo-top-offset: 140px;
   padding-right: 50px;
   padding-top: 27px;
   padding-bottom: 109px;
-  width: 262px;
   background-color: var(--basic-blue-dark);
 
   @media (min-width: $tablet-width) {
@@ -151,6 +150,7 @@ $promo-top-offset: 140px;
     padding: 0;
     position: absolute;
     bottom: 211px;
+    width: 262px;
   }
 
   @media (min-width: $desktop-width) {
