@@ -45,20 +45,34 @@
   width: 45px;
   height: 45px;
   background-color: var(--pin-color);
+  color: var(--basic-yellow);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   margin-right: 22px;
 
-  @media (min-width: $tablet-width) {
-    width: 68px;
-    height: 68px;
+  svg {
+    width: 16px;
+    height: auto;
   }
 
   @media (min-width: $tablet-width) {
+    width: 68px;
+    height: 68px;
+
+    svg {
+      width: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     width: 90px;
     height: 90px;
     margin-right: 31px;
+
+    svg {
+      width: 36px;
+    }
   }
 }

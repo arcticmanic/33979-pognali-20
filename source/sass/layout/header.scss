@@ -11,7 +11,7 @@
 
   @media (min-width: $tablet-width) {
     background-color: var(--basic-blue-dark2);
-    padding-top: 52px;
+    padding-top: 42px;
     padding-bottom: 40px;
   }
 
@@ -32,7 +32,7 @@
 
 .page-header__menu {
   @media (max-width: $tablet-width-only) {
-    padding: 25px 0;
+    padding: 42px 0 25px;
     background-color: var(--basic-white);
     position: absolute;
     top: 0;
@@ -42,6 +42,7 @@
     .page-header__wrapper {
       flex-wrap: wrap;
       flex-direction: column;
+      position: relative;
     }
 
     .page-header__toggle {
@@ -64,40 +65,14 @@
 }
 
 .page-header__toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-top: 4px;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--basic-white);
-    border-radius: 1.5px;
-    margin-bottom: 5px;
-
-    @media (min-width: $tablet-width) {
-      background-color: var(--basic-grey);
-    }
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--basic-white);
-    border-radius: 1.5px;
-
-    @media (min-width: $tablet-width) {
-      background-color: var(--basic-grey);
-    }
-  }
+  right: 25px;
+  top: 26px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 25px;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -106,8 +81,24 @@
 }
 
 .page-header__logo {
+  align-self: flex-start;
+
   img {
     display: block;
+  }
+}
+
+.page-header__main-nav {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 76px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 101px;
+    margin-bottom: 130px;
+    margin-left: 57px;
+    align-self: flex-start;
   }
 }
 
@@ -138,16 +129,15 @@
   }
 }
 
-.page-header__phone {
-  width: 100%;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-}
-
+.page-header__phone,
 .page-header__email {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 56px;
+    width: auto;
+    align-self: flex-start;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -155,10 +145,20 @@
 }
 
 .page-header__social {
+  margin-top: 40px;
+
   .social__item {
     a {
       background: none;
+      color: var(--basic-blue-dark2);
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+    margin-left: 56px;
+    margin-top: 111px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
@@ -178,6 +178,22 @@
   text-transform: uppercase;
   padding: 12px 28px 8px;
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: auto;
+    margin: 0;
+    min-width: 188px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    min-height: 50px;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
