@@ -18,6 +18,13 @@
     background-color: var(--basic-white);
   }
 
+  &:hover,
+  &:focus {
+    .custom-select__label {
+      border-color: var(--border-grey-darker);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 14px 70px;
@@ -43,11 +50,33 @@
   }
 
   .custom-select__label {
-    background: var(--background-color);
     border: none;
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23606161' d='M20 9h-9V0H9v9H0v2h9v9h2v-9h9z'/%3E%3C/svg%3E");
+      width: 21px;
+      height: 21px;
+    }
 
     &::before {
       display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .custom-select__label {
+      background: var(--background-color);
+    }
+  }
+
+  &:active {
+    .custom-select__label {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='rgba(0, 0, 0, 0.1)' d='M20 9h-9V0H9v9H0v2h9v9h2v-9h9z'/%3E%3C/svg%3E");
+        width: 21px;
+        height: 21px;
+      }
     }
   }
 }
@@ -318,8 +347,9 @@
       border-bottom-color: var(--background-color);
     }
 
-    &:hover {
-      background-color: var(--background-color);
+    &:hover,
+    &:focus {
+      border-color: var(--border-grey-darker);
     }
   }
 
@@ -349,9 +379,9 @@
         border-bottom-color: var(--background-color);
       }
 
-      &:hover {
-        color: var(--basic-white);
-        background-color: var(--basic-blue);
+      &:hover,
+      &:focus {
+        border-color: var(--border-grey-darker);
       }
     }
   }
@@ -371,8 +401,12 @@
       border: 1px solid var(--border-grey);
       border-radius: 4px;
 
-      &.active,
-      &:hover {
+      &:hover,
+      &:focus {
+        border-color: var(--border-grey-darker);
+      }
+
+      &.active {
         border-color: var(--basic-blue);
       }
     }
@@ -416,6 +450,15 @@
   line-height: 22px;
   color: var(--special-grey);
   text-align: left;
+
+  &:hover,
+  &:focus {
+    color: var(--basic-blue);
+  }
+
+  &:active {
+    color: var(--basic-blue-30);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

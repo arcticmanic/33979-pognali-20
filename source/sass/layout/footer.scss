@@ -61,9 +61,19 @@
   font-size: 16px;
   line-height: 16px;
   border-top: 1px solid var(--grey-light);
+  color: var(--special-grey);
 
   img {
     width: 27px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

@@ -306,8 +306,30 @@
           top: 9px;
           left: 9px;
           margin: auto;
-          background-image: url("../img/tick.svg");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      + label {
+        &::before {
+          border-color: var(--border-grey-darker);
+        }
+      }
+    }
+
+    &:active {
+      + label {
+        &::before {
+          border-color: var(--transport-down);
+          background-color: var(--transport-down);
+        }
+
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='rgba(22, 28, 53, 0.3)'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z'/%3E%3C/svg%3E");
         }
       }
     }
@@ -371,6 +393,27 @@
   border: 1px solid var(--border-grey);
   border-radius: 4px;
 
+  &:hover,
+  &:focus {
+    border-color: var(--border-grey-darker);
+
+    .add-plan__control {
+      svg {
+        fill: var(--border-grey-darker);
+      }
+    }
+  }
+
+  &:active {
+    border-color: var(--basic-blue-dark);
+
+    .add-plan__control {
+      svg {
+        fill: var(--basic-blue-dark);
+      }
+    }
+  }
+
   .add-plan__input {
     border: none;
   }
@@ -392,6 +435,19 @@
     width: 14px;
     height: auto;
     fill: var(--basic-grey);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--basic-grey-dark);
+    }
+  }
+
+  &:active {
+    svg {
+      fill: var(--basic-grey-light)
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -479,6 +535,15 @@
     display: none;
   }
 
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-70);
+  }
+
+  &:active {
+    color: var(--basic-blue-30);
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 80px;
     padding: 10px 34px;
@@ -521,6 +586,17 @@
 
   &--accent {
     background-color: var(--basic-yellow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--special-yellow-dark);
+      color: var(--basic-blue);
+    }
+
+    &:active {
+      background-color: var(--special-yellow-dark);
+      color: var(--basic-blue-30);
+    }
 
     @media (min-width: $tablet-width) {
       background-color: var(--basic-yellow);
@@ -567,6 +643,19 @@
   svg {
     fill: var(--basic-black);
     opacity: 0.1;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.05;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
@@ -705,7 +794,16 @@
   }
 }
 
+.add-plan__textarea-block {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 32px;
+  }
+}
+
 .add-plan__textarea {
+  display: block;
   font-family: inherit;
   font-size: 16px;
   line-height: 22px;
@@ -721,8 +819,31 @@
     color: var(--special-grey-30);
   }
 
+  &:hover {
+    border-color: var(--border-grey-darker);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    border-color: var(--basic-blue-dark);
+  }
+
+  &--error {
+    border: 1px solid var(--special-red);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid var(--special-red);
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    margin-right: 32px;
     height: 140px;
     font-size: 20px;
     line-height: 23px;
@@ -732,6 +853,27 @@
   @media (min-width: $desktop-width) {
     padding: 23px 24px;
     width: 730px;
+  }
+}
+
+.add-plan__error-msg {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--error-background);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-red);
+  padding: 15px 20px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: 1px solid var(--special-red);
+  border-right: 1px solid var(--special-red);
+  border-bottom: 1px solid var(--special-red);
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 

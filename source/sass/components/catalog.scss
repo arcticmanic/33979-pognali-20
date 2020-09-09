@@ -36,12 +36,24 @@
   margin-bottom: 10px;
   background-color: var(--basic-white);
   border-radius: 20px;
-  overflow: hidden;
   position: relative;
   padding-top: 12px;
   padding-bottom: 22px;
   display: grid;
   grid-template-columns: auto 1fr auto;
+
+  &:hover {
+    box-shadow: 0px 4px 9px var(--card-shadow);
+
+    .catalog__image {
+      img {
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
@@ -71,6 +83,9 @@
 
   img {
     display: block;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
   }
 
   @media (min-width: $tablet-width) {
@@ -98,6 +113,15 @@
   line-height: 20px;
   font-weight: 700;
   color: var(--basic-blue);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
@@ -245,12 +269,32 @@
     opacity: 0.5;
   }
 
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-dark2-30);
+  }
+
+  &:active {
+    color: var(--basic-blue-dark2-10);
+  }
+
   &--active {
     background-color: var(--like-background);
     color: var(--like-color);
 
     svg {
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--like-background-dark);
+      color: var(--like-color);
+    }
+
+    &:active {
+      background-color: var(--like-background-dark);
+      color: var(--like-color-30);
     }
   }
 
@@ -476,6 +520,16 @@
   justify-content: center;
   padding-top: 4px;
 
+  &:hover,
+  &:focus {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &:active {
+    background-color: var(--special-yellow-dark);
+    color: var(--basic-blue-dark-30);
+  }
+
   @media (min-width: $tablet-width) {
     width: auto;
     min-height: 50px;
@@ -504,6 +558,19 @@
     height: 16px;
     margin-right: 15px;
     margin-top: -4px;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -569,6 +636,11 @@
     line-height: 20px;
     padding-top: 3px;
     color: var(--basic-blue);
+
+    &:hover,
+    &:focus {
+      color: var(--basic-blue-60);
+    }
   }
 
   &--active {
@@ -596,6 +668,15 @@
   svg {
     width: 10px;
     height: auto;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-60);
+  }
+
+  &:active {
+    color: var(--basic-blue-30);
   }
 
   @media (min-width: $tablet-width) {

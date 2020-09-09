@@ -14,12 +14,11 @@ if (toggleMenu && headerMenu) {
   });
 }
 
-// Add Select
+// Select Toggler
 
-let selectDataToggle = document.querySelectorAll(".add-plan__field--select .custom-select__label");
-let customSelectAdd = document.querySelectorAll(".custom-select--add .custom-select__label");
+let selectDataToggle = document.querySelectorAll(".add-plan__field--select .custom-select--choose .custom-select__label");
 
-if (selectDataToggle && customSelectAdd) {
+if (selectDataToggle) {
   selectDataToggle.forEach(element => {
     element.addEventListener("click", function (event) {
       event.preventDefault();
@@ -27,24 +26,6 @@ if (selectDataToggle && customSelectAdd) {
       this.classList.toggle("custom-select__label--active");
       this.closest(".custom-select").classList.toggle("custom-select--active");
       this.closest(".custom-select").querySelector(".custom-select__data").classList.toggle("custom-select__data--open");
-    });
-  });
-
-  customSelectAdd.forEach(element => {
-    element.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      function insertAfter(newNode, referenceNode) {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-      }
-
-      let oldSelect = document.querySelector(".custom-select--empty").closest(".add-plan__field--select");
-      let newSelect = oldSelect.cloneNode(true);
-      let allSelects = document.querySelectorAll(".add-plan__field--select");
-      let lastSelect = allSelects[allSelects.length - 1];
-
-      insertAfter(newSelect, lastSelect);
-
     });
   });
 }
@@ -105,7 +86,7 @@ if (closeFilterClose && toggleFilter && filter) {
 
 // Search Block Toggler
 
-let searchRevealButtons = document.querySelectorAll(".search__reveal");
+let searchRevealButtons = document.querySelectorAll(".search__legend");
 
 if (searchRevealButtons) {
   searchRevealButtons.forEach(element => {
@@ -121,7 +102,68 @@ if (searchRevealButtons) {
         fieldset.classList.toggle("search__level--show");
       }
 
-      this.classList.toggle("search__reveal--show");
+      this.closest(".search__fieldset").querySelector(".search__reveal").classList.toggle("search__reveal--show");
     });
+  });
+}
+
+// Validation
+
+let form = document.querySelector(".add-plan__form");
+let formSubmit = document.querySelector(".add-plan__button[type='submit']");
+let textareaElements = document.querySelectorAll(".add-plan__textarea");
+
+if (form && formSubmit && textareaElements) {
+  formSubmit.addEventListener("click", function (e) {
+    let errorMsgs = document.querySelectorAll(".add-plan__error-msg");
+    let stopSubmit = false;
+
+    if (errorMsgs) {
+      for (let i = 0; i < errorMsgs.length; i++) {
+        errorMsgs[i].remove();
+      }
+    }
+
+    for (let i = 0; i < textareaElements.length; i++) {
+      let textareaElement = textareaElements[i];
+      textareaElement.classList.remove("add-plan__textarea--error");
+
+      if (textareaElement.checkValidity() == false) {
+        textareaElement.classList.add("add-plan__textarea--error");
+        textareaElement.insertAdjacentHTML("afterend", "<div class='add-plan__error-msg'>" + "Это поле должно быть заполнено" + "</div>")
+
+        stopSubmit = true;
+      }
+    }
+
+    if (stopSubmit) {
+      e.preventDefault();
+    }
+  });
+}
+
+// Validation Email Form
+
+let formEmail = document.querySelector(".ask-us__form");
+let formEmailSubmit = document.querySelector(".ask-us__button[type='submit']");
+let inputElement = document.querySelector(".ask-us__input");
+
+if (formEmail && formEmailSubmit && inputElement) {
+  formEmailSubmit.addEventListener("click", function (e) {
+    let stopSubmit = false;
+
+    inputElement.classList.remove("ask-us__input--error");
+    inputElement.value="";
+
+    if (inputElement.checkValidity() == false) {
+      inputElement.classList.add("ask-us__input--error");
+      inputElement.value = "Введите e-mail";
+
+      stopSubmit = true;
+    }
+
+    if (stopSubmit) {
+      e.preventDefault();
+    }
   });
 }

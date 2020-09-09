@@ -203,6 +203,16 @@
   font-weight: 500;
   font-family: inherit;
   color: var(--basic-black-30);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--basic-black-60);
+  }
+
+  &:active {
+    color: var(--basic-black-10);
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 0;

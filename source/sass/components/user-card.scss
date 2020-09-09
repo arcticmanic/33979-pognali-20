@@ -1,7 +1,6 @@
 .user-card {
   background-color: var(--basic-white);
   border-radius: 10px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -9,6 +8,19 @@
   box-shadow: 0 2px 4px var(--card-shadow);
   max-width: 285px;
   min-height: 428px;
+
+  &:hover {
+    box-shadow: 0px 4px 9px var(--card-shadow);
+
+    .user-card__image {
+      img {
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 483px;
@@ -22,6 +34,9 @@
 
   img {
     display: block;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
   }
 }
 
@@ -32,6 +47,15 @@
   color: var(--basic-blue);
   margin-bottom: 16px;
   position: relative;
+
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-70);
+  }
+
+  &:active {
+    color: var(--basic-blue-30);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -50,6 +74,7 @@
   align-items: center;
   margin-top: -10px;
   padding: 0 20px 15px;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     margin-top: -11px;
@@ -183,12 +208,12 @@
   height: 21px;
   background-color: var(--basic-white);
   color: var(--basic-blue);
-  opacity: 0.15;
   margin: 0 7px;
 
   svg {
     height: 100%;
     width: auto;
+    opacity: 0.15;
   }
 
   &--active {

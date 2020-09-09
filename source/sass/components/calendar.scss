@@ -59,6 +59,19 @@
     order: -1;
   }
 
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.1;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     svg {
       width: 19px;

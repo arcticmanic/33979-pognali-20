@@ -167,6 +167,15 @@
     &[href] {
       opacity: 0.3;
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -384,6 +393,15 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (max-width: $mobile-width-only) {
     span {
       display: none;
@@ -434,6 +452,7 @@
   padding-top: 5px;
   width: 100%;
   margin-bottom: 15px;
+  cursor: pointer;
 
   svg {
     width: 14px;
@@ -444,6 +463,16 @@
 
   &--close {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--collapse-button-background);
+  }
+
+  &:active {
+    background-color: var(--collapse-button-background);
+    color: var(--basic-blue-dark2-30);
   }
 
   @media (min-width: $tablet-width) {

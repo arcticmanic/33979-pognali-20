@@ -4,7 +4,7 @@
   @media (min-width: $desktop-width) {
     margin-top: -190px;
     padding-bottom: 16px;
-    z-index: 1;
+    z-index: 100;
   }
 }
 
@@ -36,7 +36,7 @@
   margin-top: 18px;
   margin-bottom: 33px;
   text-transform: uppercase;
-  color: var(--basic-blue);
+  color: var(--basic-blue-dark);
   background-color: var(--special-blue-light);
   border: none;
   font-family: inherit;
@@ -45,6 +45,16 @@
   line-height: 18px;
   padding: 7px 20px 5px;
   min-height: 40px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--special-blue-dark);
+  }
+
+  &:active {
+    color: var(--basic-blue-dark-30);
+  }
 
   @media (min-width: $tablet-width) {
     border-radius: 10px;
@@ -88,6 +98,16 @@
   padding: 25px;
   position: relative;
   color: var(--special-grey-60);
+
+  &:hover,
+  &:focus {
+    border-color: var(--border-grey-dark);
+  }
+
+  &:active {
+    border-color: var(--basic-blue-dark);
+    color: var(--special-grey);
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
@@ -299,6 +319,17 @@
   height: 33px;
   background-color: var(--basic-white);
   color: var(--basic-blue);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 2px 6px var(--transport-shadow);
+    color: var(--basic-blue-70);
+  }
+
+  &:active {
+    background-color: var(--transport-down);
+    color: var(--basic-blue-30);
+  }
 
   svg {
     width: 17px;

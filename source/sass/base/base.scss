@@ -33,6 +33,29 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    a {
+      color: var(--special-yellow-dark);
+    }
+
+    .phone__icon,
+    .email__icon {
+      color: var(--special-yellow-dark);
+    }
+  }
+
+  &:active {
+    a {
+      color: var(--special-yellow-dark-30);
+    }
+
+    .phone__icon,
+    .email__icon {
+      color: var(--special-yellow-dark-30);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 28px;
