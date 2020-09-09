@@ -1,16 +1,20 @@
 .page-header {
-  background-color: var(--basic-blue-dark);
+  background-color: var(--basic-blue-dark3);
   background-repeat: no-repeat;
   color: var(--basic-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 10;
+  z-index: 1000;
   position: relative;
   min-height: 68px;
 
+  &--dark {
+    background-color: var(--basic-blue-dark);
+  }
+
   @media (min-width: $tablet-width) {
-    background-color: var(--basic-blue-dark2);
+    background-color: var(--basic-blue-dark3);
     padding-top: 42px;
     padding-bottom: 40px;
   }
@@ -18,7 +22,11 @@
   @media (min-width: $desktop-width) {
     padding-top: 48px;
     padding-bottom: 10px;
-    background-color: var(--basic-blue-dark);
+    background-color: var(--basic-blue-dark2);
+
+    &--dark {
+      background-color: var(--basic-blue-dark);
+    }
   }
 }
 
@@ -52,6 +60,10 @@
     &--closed {
       display: none;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 26px 0 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -89,16 +101,18 @@
 }
 
 .page-header__main-nav {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 76px;
-    margin-bottom: 50px;
-  }
-
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
     margin-top: 101px;
     margin-bottom: 130px;
     margin-left: 57px;
     align-self: flex-start;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 76px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -169,7 +183,6 @@
 .page-header__button {
   @include bordered;
   width: 100%;
-  text-align: center;
   background-color: var(--basic-yellow);
   color: var(--basic-blue-dark);
   font-weight: 700;
@@ -180,6 +193,7 @@
   margin-bottom: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     position: absolute;

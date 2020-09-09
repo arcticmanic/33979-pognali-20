@@ -8,11 +8,21 @@
   a {
     border-radius: 25px;
     background-color: var(--basic-yellow);
+    color: var(--basic-blue-dark);
     min-width: 40px;
     min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:active {
+      color: var(--basic-blue-dark-30);
+    }
 
     @media (min-width: $desktop-width) {
       min-width: 50px;
@@ -36,6 +46,11 @@
   &:nth-child(3n+1) {
     a {
       background-color: var(--special-orange);
+
+      &:hover,
+      &:focus {
+        background-color: (--dark-orange);
+      }
     }
   }
 

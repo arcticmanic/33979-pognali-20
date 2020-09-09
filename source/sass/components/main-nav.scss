@@ -65,6 +65,35 @@
     font-weight: 500;
     text-transform: uppercase;
     color: var(--basic-blue-dark2);
+    overflow: hidden;
+
+    span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+
+      &::before {
+        position: absolute;
+        top: 100%;
+        color: var(--basic-yellow);
+        content: attr(data-hover);
+        transform: translate3d(0,0,0);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+
+      span {
+        transform: translateY(-100%);
+      }
+    }
+
+    &:active {
+      color: var(--basic-yellow);
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $tablet-width) {
