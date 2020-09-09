@@ -43,7 +43,7 @@
   grid-template-columns: auto 1fr auto;
 
   &:hover {
-    box-shadow: 0px 4px 9px var(--card-shadow);
+    box-shadow: 0 4px 9px var(--card-shadow);
 
     .catalog__image {
       img {

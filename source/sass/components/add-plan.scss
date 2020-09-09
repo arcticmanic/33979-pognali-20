@@ -446,7 +446,7 @@
 
   &:active {
     svg {
-      fill: var(--basic-grey-light)
+      fill: var(--basic-grey-light);
     }
   }
 
@@ -478,7 +478,6 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
-    width: auto;
     width: 200px;
     margin-right: 21px;
     letter-spacing: normal;
