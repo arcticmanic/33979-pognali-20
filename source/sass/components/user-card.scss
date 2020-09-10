@@ -31,12 +31,19 @@
 .user-card__image {
   overflow: hidden;
   flex-shrink: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   img {
     display: block;
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 }
 
