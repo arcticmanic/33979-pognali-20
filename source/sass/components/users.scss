@@ -35,6 +35,13 @@
   background-size: 113px 132px, 143px 143px, 71px 71px;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 113 132'%3E%3Cpath fill='%23141B3B' d='M0 0h93c11.046 0 20 8.9543 20 20v92c0 11.046-8.954 20-20 20H0V0z'/%3E%3C/svg%3E"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     background-image:
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 212 212'%3E%3Crect width='212' height='212' fill='%23141B3B' rx='20'/%3E%3C/svg%3E"),
@@ -47,6 +54,13 @@
     padding-top: 108px;
     padding-left: 74px;
     padding-right: 74px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 212 212'%3E%3Crect width='212' height='212' fill='%23141B3B' rx='20'/%3E%3C/svg%3E"),
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -63,6 +77,13 @@
       url("../img/rogovaya-back-desktop@1x.png");
     background-position: top -60px left -70px, top 2px left 419px, bottom -22px left 62px;
     background-size: 212px 212px, 143px 143px, 285px 285px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 212 212'%3E%3Crect width='212' height='212' fill='%23141B3B' rx='20'/%3E%3C/svg%3E"),
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 }
 

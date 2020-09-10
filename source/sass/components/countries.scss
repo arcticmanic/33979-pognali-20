@@ -34,6 +34,10 @@
     background-repeat: no-repeat;
     background-origin: content-box;
     align-items: stretch;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {

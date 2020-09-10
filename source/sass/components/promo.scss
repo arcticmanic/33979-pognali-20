@@ -62,6 +62,10 @@ $promo-top-offset: 140px;
     background-size: 1479px 612px;
     background-repeat: no-repeat;
     padding-bottom: $promo-top-offset;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -69,6 +73,10 @@ $promo-top-offset: 140px;
     background-image: url("../img/globe-back-desktop@1x.jpg");
     background-size: 1800px 750px;
     padding-bottom: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-back-desktop@2x.jpg");
+    }
   }
 
   .promo__wrapper {
@@ -105,6 +113,10 @@ $promo-top-offset: 140px;
   background-position: center bottom 29%;
   background-size: 100% 569px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/globe-back-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -233,6 +245,10 @@ $promo-top-offset: 140px;
     background-size: auto 100%, 113px 132px;
     background-repeat: no-repeat;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-mobile@2x.png");
+    }
+
     @media (min-width: $tablet-width) {
       padding-bottom: 90px;
       padding-left: 40px;
@@ -243,6 +259,10 @@ $promo-top-offset: 140px;
       background-position: top 60px right 8px, top left;
       background-size: 376px 548px, 100% 212px;
       background-origin: border-box, content-box;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -256,6 +276,10 @@ $promo-top-offset: 140px;
       background-position: bottom right 60px, top -20px left -35px;
       background-size: 630px 665px, 212px 212px;
       background-origin: border-box, content-box;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
     }
   }
 }
