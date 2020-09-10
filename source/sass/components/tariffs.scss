@@ -1,3 +1,109 @@
+.tariffs {
+  display: none;
+  background-color: var(--basic-white);
+  box-shadow: 0 4px 22px var(--basic-blue-18);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 0 25px;
+
+  &--show {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 750px;
+    margin-top: 109px;
+  }
+}
+
+.tariffs__wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 90px;
+  }
+}
+
+.tariffs__heading {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--special-orange);
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
 .tariffs__list {
-  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid var(--basic-black-5);
+  margin-bottom: 52px;
+}
+
+.tariffs__item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--special-grey);
+  width: 50%;
+  margin: 0;
+  border-bottom: 1px solid var(--basic-black-5);
+  padding: 13px 0;
+
+  &:nth-child(2n) {
+    text-align: right;
+    padding-left: 10px;
+    word-break: break-word;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.tariffs__close {
+  font-family: inherit;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--basic-blue);
+  background-color: var(--modal-close-background);
+  padding: 25px 25px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--background-color);
+  }
+
+  &:active {
+    background-color: var(--background-color);
+    color: var(--basic-blue-30);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 42px 40px;
+  }
 }

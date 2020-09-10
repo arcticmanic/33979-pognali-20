@@ -1,5 +1,14 @@
 .catalog {
-  margin-bottom: 80px;
+  margin-bottom: 46px;
+  margin-top: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 165px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+  }
 }
 
 .catalog__wrapper {
@@ -27,12 +36,24 @@
   margin-bottom: 10px;
   background-color: var(--basic-white);
   border-radius: 20px;
-  overflow: hidden;
   position: relative;
   padding-top: 12px;
   padding-bottom: 22px;
   display: grid;
   grid-template-columns: auto 1fr auto;
+
+  &:hover {
+    box-shadow: 0 4px 9px var(--card-shadow);
+
+    .catalog__image {
+      img {
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
@@ -62,6 +83,9 @@
 
   img {
     display: block;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
   }
 
   @media (min-width: $tablet-width) {
@@ -79,7 +103,7 @@
     width: 285px;
     height: 285px;
     margin-left: 0;
-    margin-right: 62px;
+    margin-right: 44px;
   }
 }
 
@@ -89,6 +113,15 @@
   line-height: 20px;
   font-weight: 700;
   color: var(--basic-blue);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
@@ -236,12 +269,32 @@
     opacity: 0.5;
   }
 
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-dark2-30);
+  }
+
+  &:active {
+    color: var(--basic-blue-dark2-10);
+  }
+
   &--active {
     background-color: var(--like-background);
     color: var(--like-color);
 
     svg {
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--like-background-dark);
+      color: var(--like-color);
+    }
+
+    &:active {
+      background-color: var(--like-background-dark);
+      color: var(--like-color-30);
     }
   }
 
@@ -317,6 +370,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
+    margin-right: 43px;
   }
 }
 
@@ -404,7 +458,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -466,6 +520,16 @@
   justify-content: center;
   padding-top: 4px;
 
+  &:hover,
+  &:focus {
+    background-color: var(--special-yellow-dark);
+  }
+
+  &:active {
+    background-color: var(--special-yellow-dark);
+    color: var(--basic-blue-dark-30);
+  }
+
   @media (min-width: $tablet-width) {
     width: auto;
     min-height: 50px;
@@ -484,6 +548,7 @@
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 15px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -495,12 +560,29 @@
     margin-top: -4px;
   }
 
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
     max-width: 949px;
     justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
@@ -554,6 +636,11 @@
     line-height: 20px;
     padding-top: 3px;
     color: var(--basic-blue);
+
+    &:hover,
+    &:focus {
+      color: var(--basic-blue-60);
+    }
   }
 
   &--active {
@@ -581,6 +668,15 @@
   svg {
     width: 10px;
     height: auto;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--basic-blue-60);
+  }
+
+  &:active {
+    color: var(--basic-blue-30);
   }
 
   @media (min-width: $tablet-width) {

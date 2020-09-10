@@ -8,11 +8,21 @@
   a {
     border-radius: 25px;
     background-color: var(--basic-yellow);
+    color: var(--basic-blue-dark);
     min-width: 40px;
     min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:active {
+      color: var(--basic-blue-dark-30);
+    }
 
     @media (min-width: $desktop-width) {
       min-width: 50px;
@@ -30,18 +40,33 @@
       text-transform: uppercase;
       padding: 12px 28px 8px;
       min-width: 190px;
+
+      &:hover,
+      &:focus {
+        background-color: var(--special-yellow-dark);
+      }
     }
   }
 
   &:nth-child(3n+1) {
     a {
       background-color: var(--special-orange);
+
+      &:hover,
+      &:focus {
+        background-color: var(--dark-orange);
+      }
     }
   }
 
   &:nth-child(3n+2) {
     a {
       background-color: var(--special-yellow-dark);
+
+      &:hover,
+      &:focus {
+        background-color: var(--special-orange);
+      }
     }
   }
 }

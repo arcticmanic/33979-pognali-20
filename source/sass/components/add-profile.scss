@@ -1,12 +1,19 @@
 .add-profile {
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: var(--background-color);
   padding-top: 50px;
   margin-top: -50px;
   padding-bottom: 38px;
   z-index: 3;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    margin-top: -100px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .add-profile__wrapper {
@@ -192,7 +199,7 @@
     margin-right: 45px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     position: absolute;
     width: 198px;
     height: 198px;
@@ -225,6 +232,15 @@
     height: 68px;
     background-color: var(--grey-light3);
     margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (max-width: $mobile-width-only) {

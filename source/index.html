@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header">
+    <header class="page-header page-header--dark">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -16,83 +16,128 @@
             <img src="img/logo-mobile-white@1x.png" alt="Логотип &laquo;Погнали&raquo;">
           </picture>
         </a>
-        <button class="page-header__toggle page-header__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="page-header__menu page-header__menu--closed">
-          <div class="page-header__wrapper">
-            <a class="page-header__logo page-header__logo--dark" href="/">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-                <img src="img/logo-mobile-blue@1x.png" alt="Логотип &laquo;Погнали&raquo;">
-              </picture>
-            </a>
-            <button class="page-header__toggle page-header__toggle--close" type="button">
-              <span class="visually-hidden">Закрыть меню</span>
-              <img src="../img/small-cross.svg" width="18" height="19" alt="">
-            </button>
-            <nav class="page-header__main-nav main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item ">
-                  <a href="index.html">О сервисе</a>
-                </li>
-                <li class="main-nav__item ">
-                  <a href="form.html">Направления</a>
-                </li>
-                <li class="main-nav__item ">
-                  <a href="catalog.html">Попутчики</a>
-                </li>
-              </ul>
-            </nav>
-            <a class="page-header__button" href="login.html">Авторизация</a>
-            <div class="phone phone--dark page-header__phone">
-              <div class="phone__icon">
-                <img src="../img/contacts-phone.svg" width="16" height="15" alt="">
-              </div>
-              <a href="tel:88005558628">8 800 555-86-28</a>
-            </div>
-            <div class="email email--dark page-header__phone">
-              <div class="email__icon">
-                <img src="../img/topmenu-mail.svg" width="19" height="13" alt="">
-              </div>
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </div>
-            <div class="social page-header__social">
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="#">
-                    <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#">
-                    <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="#">
-                    <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <button class="page-header__toggle menu-toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="page-header__main-nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html"><span data-hover="О сервисе">О сервисе</span></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html"><span data-hover="Направления">Направления</span></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
+            </li>
+          </ul>
+        </nav>
         <div class="page-header__auth auth">
           <ul class="auth__list">
             <li class="auth__item">
               <a href="tel:+1234567890">
-                <img src="img/topmenu-phone.svg" width="18" height="18" alt="Позвонить">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="currentColor">
+                  <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
+                  <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zm0 5.8V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
+                  <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+                </svg>
               </a>
             </li>
             <li class="auth__item">
               <a href="mailto:mail@mail.test">
-                <img src="img/topmenu-mail.svg" width="18" height="16" alt="Оправить email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" fill="currentColor">
+                  <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+                  <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+                </svg>
               </a>
             </li>
             <li class="auth__item auth__item--login">
               <a class="auth__login" href="login.html">Авторизация</a>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div class="page-header__mobile page-header__mobile--closed">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo page-header__logo--dark" href="/">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+              <img src="img/logo-mobile-blue@1x.png" alt="Логотип &laquo;Погнали&raquo;">
+            </picture>
+          </a>
+          <nav class="page-header__main-nav main-nav main-nav--mobile">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html"><span data-hover="О сервисе">О сервисе</span></a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html"><span data-hover="Направления">Направления</span></a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__auth auth">
+            <ul class="auth__list">
+              <li class="auth__item">
+                <a href="tel:+1234567890">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="currentColor">
+                    <path d="M12.6 18h-.8c-3.6-.4-6.2-2.1-8.1-4.3C1.8 11.6.3 8.8 0 5V4c.1-.7.4-1.1.8-1.5C1.2 2 2 1.4 2.6 1.3c.5 0 1.3.3 1.6.8.3.4.4 1.2.6 1.8.1.6.4 1.4.4 2-.2.9-1.3 1.3-1.7 1.9 1.1 2.8 3 4.8 5.4 6.2.6-.3 1.2-1.4 2-1.4.3 0 .7.2 1 .3.3.1.6.2 1 .4.5.2 1.4.5 1.7.9.3.4.5 1.2.4 1.7-.1.8-1.6 1.8-2.4 2.1z"/>
+                    <path d="M9.1 1.1c4.3 0 7.8 3.6 7.8 8H18c0-5-4-9.1-8.9-9.1v1.1zm0 5.8V8c.6 0 1 .5 1 1.1h1.1c0-1.2-.9-2.2-2.1-2.2z"/>
+                    <path d="M9.1 4.6c2.4 0 4.4 2 4.4 4.5h1.2c0-3.1-2.5-5.7-5.5-5.7v1.2h-.1z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="auth__item">
+                <a href="mailto:mail@mail.test">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" fill="currentColor">
+                    <path d="M14.9 1.8c1.2-1 .9-1.8-.7-1.8H3.7c-1.5 0-1.8.8-.6 1.8l3.7 3.1c1.2 1 3.2 1 4.4 0l3.7-3.1z"/>
+                    <path d="M11.9 7.1c-1.2 1-2.2 1.8-2.2 1.8-.1.1-.2.1-.3.1h-.1c-.1.1-.2.1-.3.1-.1 0-.2 0-.3-.1h-.1c-.1 0-.2 0-.3-.1 0 0-1-.8-2.2-1.8L2.2 3.8C1 2.8 0 3.3 0 4.8v6.3C0 12.7 1.3 14 2.8 14h12.3c1.6 0 2.8-1.3 2.8-2.8V4.8c0-1.6-1-2-2.2-1l-3.8 3.3z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="auth__item auth__item--login">
+                <a class="auth__login" href="login.html">Авторизация</a>
+              </li>
+            </ul>
+          </div>
+          <a class="page-header__button" href="login.html">Авторизация</a>
+          <div class="phone phone--dark page-header__phone">
+            <div class="phone__icon">
+              <svg fill="currentColor" viewBox="0 0 36 36">
+                <path d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/>
+              </svg>
+            </div>
+            <a href="tel:88005558628">8&nbsp;800 555-86-28</a>
+          </div>
+          <div class="email email--dark page-header__phone">
+            <div class="email__icon">
+              <svg fill="currentColor" viewBox="0 0 36 26">
+                <path d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z"/>
+              </svg>
+            </div>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="social page-header__social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/facebook.svg" width="11" height="21" alt="Социальные сети: Facebook">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/vk.svg" width="23" height="12" alt="Социальные сети: Vkontakte">
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#">
+                  <img src="img/instagram.svg" width="18" height="18" alt="Социальные сети: Istagram">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -303,22 +348,22 @@
                 </div>
                 <div class="user-card__transport">
                   <ul class="user-card__transport-list">
-                    <li class="user-card__transport-item user-card__transport-item--active">
+                    <li class="user-card__transport-item user-card__transport-item--active tooltip" data-tooltip="Авиаперелет">
                       <svg class="icon-plane" fill="currentColor" viewBox="0 0 19 21">
                         <path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item">
+                    <li class="user-card__transport-item tooltip" data-tooltip="Автотранспорт">
                       <svg class="icon-bus" fill="currentColor" viewBox="0 0 17 21">
                         <path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item">
+                    <li class="user-card__transport-item tooltip" data-tooltip="Велосипед">
                       <svg class="icon-bike" fill="currentColor" viewBox="0 0 24 21">
                         <path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item">
+                    <li class="user-card__transport-item tooltip" data-tooltip="Пешком">
                       <svg class="icon-run" fill="currentColor" viewBox="0 0 20 21">
                         <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
                         <path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/>
@@ -359,22 +404,22 @@
                 </div>
                 <div class="user-card__transport">
                   <ul class="user-card__transport-list">
-                    <li class="user-card__transport-item user-card__transport-item--active">
+                    <li class="user-card__transport-item user-card__transport-item--active tooltip" data-tooltip="Авиаперелет">
                       <svg class="icon-plane" fill="currentColor" viewBox="0 0 19 21">
                         <path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item user-card__transport-item--active">
+                    <li class="user-card__transport-item user-card__transport-item--active tooltip" data-tooltip="Автотранспорт">
                       <svg class="icon-bus" fill="currentColor" viewBox="0 0 17 21">
                         <path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item">
+                    <li class="user-card__transport-item tooltip" data-tooltip="Велосипед">
                       <svg class="icon-bike" fill="currentColor" viewBox="0 0 24 21">
                         <path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/>
                       </svg>
                     </li>
-                    <li class="user-card__transport-item user-card__transport-item--active">
+                    <li class="user-card__transport-item user-card__transport-item--active tooltip" data-tooltip="Пешком">
                       <svg class="icon-run" fill="currentColor" viewBox="0 0 20 21">
                         <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
                         <path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/>
@@ -435,6 +480,24 @@
           <a href="#" class="add-profile__show">
             Показать тарифы для бизнеса
           </a>
+
+          <section class="tariffs">
+            <div class="tariffs__wrapper">
+              <h2 class="tariffs__heading">Бизнес-тарифы</h2>
+              <dl class="tariffs__list">
+                <dt class="tariffs__item">Реклама у блоггера</dt>
+                <dd class="tariffs__item">300 000 руб./пост</dd>
+                <dt class="tariffs__item">Накрутка подписчиков</dt>
+                <dd class="tariffs__item">от 1 руб./шт.</dd>
+                <dt class="tariffs__item">Лайки от ботов</dt>
+                <dd class="tariffs__item">от 20 коп./лайк</dd>
+                <dt class="tariffs__item">Ваш продакт-плейсмент</dt>
+                <dd class="tariffs__item">Индивидуально</dd>
+              </dl>
+            </div>
+            <button class="tariffs__close" type="button">Закрыть окно</button>
+          </section>
+
         </div>
       </section>
 
@@ -448,7 +511,7 @@
             скорее <a href="#">авторизуйтесь</a>.
           </div>
           <form class="ask-us__form" action="https://echo.htmlacademy.ru/">
-            <input class="ask-us__input" type="email" name="email" placeholder="E-mail" id="ask-us-user-email">
+            <input class="ask-us__input" type="email" name="email" placeholder="E-mail" id="ask-us-user-email" required>
             <label class="visually-hidden" for="ask-us-user-email">Email</label>
             <button class="ask-us__button" type="submit">
               <span>Регистрация</span>
@@ -501,6 +564,7 @@
         </div>
       </section>
       <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.9018972840477!2d30.32025302851417!3d59.9382857425985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599727642158!5m2!1sru!2sru" width="1440" height="584" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <picture>
           <source media="(min-width: 769px)" srcset="img/background-map-desktop.jpg">
           <source media="(min-width: 321px)" srcset="img/background-map-tablet.jpg">
@@ -541,35 +605,12 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">
           Разработано
           <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип &laquo;Htmlacademy&raquo;">
-        </div>
+        </a>
       </div>
     </footer>
-
-    <section class="modal tariffs">
-      <h2 class="tariffs__subheading">Бизнес-тарифы</h2>
-      <ul class="tariffs__list">
-        <li class="tariffs__item">
-          Реклама у блоггера<br>
-          300 000 руб./пост
-        </li>
-        <li class="tariffs__item">
-          Накрутка подписчиков<br>
-          от 1 руб./шт.
-        </li>
-        <li class="tariffs__item">
-          Лайки от ботов<br>
-          от 20 коп./лайк
-        </li>
-        <li class="tariffs__item">
-          Ваш продакт-плейсмент<br>
-          Индивидуально
-        </li>
-      </ul>
-      <button class="tariffs__close js-close" type="button">Закрыть окно</button>
-    </section>
 
     <script src="js/app.js"></script>
 

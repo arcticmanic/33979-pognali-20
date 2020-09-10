@@ -22,6 +22,20 @@
     width: 45px;
     height: 45px;
     background-color: var(--basic-yellow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--special-yellow-dark);
+    }
+
+    &:active {
+      background-color: var(--special-yellow-dark);
+      color: var(--basic-blue-dark2-30);
+
+      img {
+        opacity: 0.3;
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {

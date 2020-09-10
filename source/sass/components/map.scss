@@ -4,12 +4,25 @@
   margin-top: -50px;
   margin-bottom: -50px;
   position: relative;
+  z-index: 0;
 
   img {
-    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: $tablet-width) {

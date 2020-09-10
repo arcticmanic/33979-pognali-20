@@ -11,6 +11,7 @@
 
   @media (min-width: $desktop-width) {
     width: 285px;
+    padding: 37px 35px 38px;
   }
 }
 
@@ -42,6 +43,7 @@
   margin: 0 0 10px 0;
   padding: 0;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -79,8 +81,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
+
     &::before {
       display: none;
+    }
+
+    &:last-of-type {
+      margin-bottom: 19px;
     }
   }
 }
@@ -95,12 +103,20 @@
   line-height: 18px;
   color: var(--basic-blue);
   text-transform: uppercase;
-  margin-bottom: 14px;
 
   span {
     @media (max-width: $mobile-width-only), (min-width: $desktop-width) {
       display: none;
     }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -117,7 +133,6 @@
   @media (min-width: $desktop-width) {
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 27px;
     margin-right: 0;
   }
 }
@@ -133,11 +148,13 @@
   svg {
     display: block;
     width: 100%;
+    transition: 200ms ease-in-out;
   }
 
-  &--rotated {
+  &--show {
     svg {
       transform: rotate(180deg);
+      transition: 200ms ease-in-out;
     }
   }
 
@@ -148,11 +165,23 @@
 
 .search__list {
   @include reset-list;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
+  margin-top: 15px;
 
-  @media (min-width: $tablet-width) {
+  &--show {
+    display: flex;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     flex-grow: 1;
+    margin-top: 0;
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -167,6 +196,7 @@
     font-size: 15px;
     line-height: 20px;
     color: var(--basic-black);
+    position: relative;
   }
 
   input {
@@ -184,21 +214,67 @@
 
     &:checked {
       + label {
-        &::before {
-          background-color: var(--basic-black);
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 8px;
+          height: 8px;
+          background-image: url("../img/tick.svg");
+          background-repeat: no-repeat;
         }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      + label {
+        color: var(--basic-black-60);
+      }
+    }
+
+    &:active {
+      + label {
+        opacity: 0.3;
       }
     }
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    margin-right: 10px;
-    width: 140px;
+    width: 33%;
+
+    label {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    input {
+      + label {
+        &::before {
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+        }
+      }
+
+      &:checked {
+        + label {
+          &::after {
+            width: 12px;
+            height: 12px;
+            top: 6px;
+            left: 6px;
+          }
+        }
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
   }
 }
 
@@ -206,21 +282,56 @@
   label {
     @include bordered;
     background-color: var(--basic-white);
+    color: var(--basic-blue);
     width: 32px;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  svg {
+    height: 16px;
+    width: 16px;
+    opacity: 0.15;
+  }
+
+  input {
+    &:checked {
+      + label {
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    label {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      height: 22px;
+      width: 22px;
+    }
+  }
 }
 
 .search__level {
   position: relative;
   flex-grow: 1;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: none;
+
+  &--show {
+    display: block;
+  }
 }
 
 .range-input {
-  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -237,23 +348,23 @@
 .range-input__fieldset {
   display: flex;
   position: relative;
-  border: 1px solid var(--border-grey);
-  border-radius: 4px;
-  background-color: var(--basic-white);
-  overflow: hidden;
   margin-bottom: 24px;
 
   &::before {
     content: "";
     order: 1;
     width: 1px;
+    height: 14px;
+    align-self: center;
     flex-shrink: 0;
-    background: linear-gradient(var(--border-grey) 0%, var(--border-grey) 33%, var(--basic-white) 33%, var(--basic-white) 67%, var(--border-grey) 67%, var(--border-grey) 100%);
+    background: var(--basic-white);
+    z-index: 10;
   }
 
   &::after {
     content: "";
     position: absolute;
+    z-index: 100;
     top: 50%;
     left: 50%;
     margin-left: -10px;
@@ -265,31 +376,75 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    width: 148px;
     order: 1;
   }
 
   @media (min-width: $desktop-width) {
     order: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    width: auto;
   }
 }
 
 .range-input__field {
+  position: relative;
+
   input {
     width: 100%;
-
+    position: relative;
+    color: var(--basic-blue);
     height: 35px;
-    border: none;
     font-family: inherit;
     font-weight: 500;
     font-size: 14px;
     line-height: 13px;
     letter-spacing: 0.06em;
     text-align: center;
+    border: 1px solid var(--border-grey);
+
+    &:hover {
+      border-color: var(--border-grey-darker);
+      z-index: 1;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--basic-blue-dark);
+      z-index: 1;
+    }
+  }
+
+  &:first-child {
+    margin-right: -1px;
+
+    input {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
   }
 
   &:last-child {
     order: 1;
+    margin-left: -1px;
+
+    input {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    input {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    input {
+      height: 46px;
+    }
   }
 }
 
@@ -297,7 +452,14 @@
   min-width: 190px;
 
   @media (min-width: $tablet-width) {
+    width: 281px;
+    flex-grow: 1;
+    margin-right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 100%;
+    margin-right: 0;
   }
 }
 
@@ -306,6 +468,11 @@
   height: 2px;
   background-color: var(--basic-blue-20);
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    height: 3px;
+    border-radius: 2px;
+  }
 }
 
 .range-input__bar-inner {
@@ -317,6 +484,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 3px;
+  }
 }
 
 .range-input__pin {
@@ -324,6 +495,28 @@
   width: 10px;
   height: 10px;
   background-color: var(--basic-blue);
+
+  &:hover,
+  &:focus {
+    width: 15px;
+    height: 15px;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px var(--pin-shadow);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 13px;
+
+    &:hover,
+    &:focus {
+      width: 19px;
+      height: 19px;
+    }
+  }
 }
 
 .search__button {
@@ -342,8 +535,22 @@
   align-items: center;
   justify-content: center;
   padding-top: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 3px 6px var(--button-shadow);
+  }
+
+  &:active {
+    background-color: var(--search-line);
+    color: var(--basic-blue-dark-30);
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 50px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
