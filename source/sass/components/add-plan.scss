@@ -1,6 +1,14 @@
 .add-plan {
   margin-top: -15px;
   margin-bottom: -50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: var(--background-form-color);
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 }
 
 .add-plan__heading {
@@ -24,19 +32,11 @@
 
 .add-plan__wrapper {
   @include wrapper(25px, 75px, 60px);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
   padding-top: 31px;
   padding-bottom: 81px;
-  background-color: var(--background-form-color);
 
   @media (min-width: $tablet-width) {
     padding-top: 53px;
-  }
-
-  @media (min-width: $desktop-width) {
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
   }
 }
 

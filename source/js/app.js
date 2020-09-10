@@ -3,14 +3,32 @@
 // Header Menu Toggler
 
 let toggleMenu = document.querySelector(".menu-toggler");
-let headerMenu = document.querySelector(".page-header__menu");
+let header = document.querySelector(".page-header");
+let headerMobile = document.querySelector(".page-header__mobile");
 
-if (toggleMenu && headerMenu) {
+if (toggleMenu && header && headerMobile) {
   toggleMenu.addEventListener("click", function (event) {
     event.preventDefault();
 
-    headerMenu.classList.toggle("page-header__menu--closed");
-    this.classList.toggle("menu-toggler--open");
+    if (this.classList.contains("menu-toggler--open")) {
+      this.classList.remove("menu-toggler--open");
+      headerMobile.classList.add("page-header__mobile--closed");
+    } else {
+      this.classList.add("menu-toggler--open");
+      headerMobile.classList.remove("page-header__mobile--closed");
+    }
+  });
+
+  // Header Change
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > header.offsetHeight) {
+      header.classList.add("page-header--alternate");
+      toggleMenu.classList.add("menu-toggler--fixed");
+    } else {
+      header.classList.remove("page-header--alternate");
+      toggleMenu.classList.remove("menu-toggler--fixed");
+    }
   });
 }
 

@@ -13,19 +13,45 @@
     background-color: var(--basic-blue-dark);
   }
 
+  &--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &--alternate {
+    .page-header__mobile--closed {
+      height: 69px;
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     background-color: var(--basic-blue-dark3);
     padding-top: 42px;
     padding-bottom: 40px;
+
+    &--alternate {
+      .page-header__mobile--closed {
+        height: 132px;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 48px;
-    padding-bottom: 10px;
+    padding-bottom: 48px;
     background-color: var(--basic-blue-dark2);
 
     &--dark {
       background-color: var(--basic-blue-dark);
+    }
+
+    &--alternate {
+      .page-header__mobile--closed {
+        height: auto;
+      }
     }
   }
 }
@@ -36,44 +62,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.page-header__menu {
-  @media (max-width: $tablet-width-only) {
-    padding: 42px 0 25px;
-    background-color: var(--basic-white);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    .page-header__wrapper {
-      flex-wrap: wrap;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .page-header__toggle {
-      margin-left: auto;
-    }
-
-    &--closed {
-      display: none;
-    }
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding: 26px 0 25px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: auto;
-    margin-top: 5px;
-
-    .page-header__wrapper {
-      padding: 0;
-    }
-  }
 }
 
 .page-header__toggle {
@@ -94,6 +82,7 @@
 
 .page-header__logo {
   align-self: flex-start;
+  flex-shrink: 0;
 
   img {
     display: block;
@@ -141,6 +130,65 @@
     min-height: 50px;
     min-width: 188px;
   }
+
+  &--fixed {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  &--inner {
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+}
+
+.page-header__mobile {
+  background-color: var(--basic-white);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 25px;
+  padding-top: 25px;
+
+  .page-header__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .page-header__logo {
+    order: -1;
+  }
+
+  .page-header__auth {
+    order: -1;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    .page-header__wrapper {
+      flex-wrap: nowrap;
+    }
+
+    .page-header__logo {
+      order: 0;
+    }
+
+    .page-header__auth {
+      order: 0;
+    }
+  }
 }
 
 .page-header__phone,
@@ -149,7 +197,6 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 56px;
-    width: auto;
     align-self: flex-start;
   }
 
@@ -191,41 +238,21 @@
 }
 
 .page-header__button {
-  @include bordered;
-  width: 100%;
-  background-color: var(--basic-yellow);
-  color: var(--basic-blue-dark);
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-  padding: 12px 28px 8px;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    right: 40px;
-    width: auto;
-    margin: 0;
-    min-width: 188px;
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    font-weight: normal;
-    min-height: 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-}
-
-.page-header__logo--dark {
-  @media (min-width: $desktop-width) {
-    display: none;
+  @media (max-width: $mobile-width-only) {
+    @include bordered;
+    width: 100%;
+    background-color: var(--basic-yellow);
+    color: var(--basic-blue-dark);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 12px 28px 8px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -39,7 +39,11 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px var(--basic-yellow);
+    outline: none;
+  }
+
+  &--fixed {
+    position: fixed;
   }
 
   &--open {
@@ -58,6 +62,18 @@
       transition-property: transform;
       transition-duration: 0.15s;
       transition-timing-function: ease;
+      background-color: var(--basic-grey);
+    }
+  }
+}
+
+.page-header--alternate {
+  .menu-toggler {
+    &::before {
+      background-color: var(--basic-grey);
+    }
+
+    &::after {
       background-color: var(--basic-grey);
     }
   }
