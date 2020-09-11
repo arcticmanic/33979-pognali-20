@@ -14,6 +14,8 @@
 }
 
 .social__item {
+  color: var(--basic-blue-dark2);
+
   a {
     @include bordered;
     display: flex;
@@ -21,6 +23,7 @@
     justify-content: center;
     width: 45px;
     height: 45px;
+    color: inherit;
     background-color: var(--basic-yellow);
 
     &:hover,

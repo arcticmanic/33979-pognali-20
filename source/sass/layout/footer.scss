@@ -63,10 +63,6 @@
   border-top: 1px solid var(--grey-light);
   color: var(--special-grey);
 
-  img {
-    width: 27px;
-  }
-
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -82,9 +78,11 @@
     font-size: 20px;
     line-height: 20px;
     padding: 0;
+  }
+}
 
-    img {
-      margin-left: 24px;
-    }
+.copyright__icon {
+  @media (min-width: $tablet-width) {
+    margin-left: 24px;
   }
 }
