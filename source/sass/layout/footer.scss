@@ -53,11 +53,14 @@
 }
 
 .page-footer__copyright {
+  margin-top: 35px;
+}
+
+.copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 13px 0 19px;
-  margin-top: 35px;
   font-size: 16px;
   line-height: 16px;
   border-top: 1px solid var(--grey-light);
