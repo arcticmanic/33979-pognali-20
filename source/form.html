@@ -164,7 +164,8 @@
           <div class="user-info__avatar">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-              <img src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" alt="Фото пользователя Петя Демин">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+              <img src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Фото пользователя Петя Демин">
             </picture>
           </div>
           <button type="button" class="user-info__button"><span>Сменить</span> фото</button>
@@ -409,7 +410,7 @@
                       </div>
                     </div>
                     <div class="custom-select__flag">
-                      <img src="img/flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                      <img src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
                     </div>
                   </div>
                   <button type="button" class="add-plan__delete">
@@ -426,7 +427,7 @@
                       </div>
                     </div>
                     <div class="custom-select__flag">
-                      <img src="img/flag-czechia.png" width="35" height="24" alt="Флаг Чехии">
+                      <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
                     </div>
                   </div>
                   <button type="button" class="add-plan__delete">
@@ -572,7 +573,7 @@
                 <div class="add-plan__field add-plan__field--checkpoint">
                   <label class="add-plan__label-with-country" for="add-plan-activity-1">
                     <span class="add-plan__label-text">Босния и Герцеговина</span>
-                    <img src="img/flag-bosnia-and-herzegovina.png" width="35" height="24" alt="Флаг Чехии">
+                    <img src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Чехии">
                   </label>
                   <div class="add-plan__textarea-block">
                     <textarea class="add-plan__textarea" required name="activities" id="add-plan-activity-1" cols="30" rows="10" placeholder="План действий"></textarea>
@@ -581,7 +582,7 @@
                 <div class="add-plan__field add-plan__field--checkpoint">
                   <label class="add-plan__label-with-country" for="add-plan-activity-2">
                     <span class="add-plan__label-text">Чехия</span>
-                    <img src="img/flag-czechia.png" width="35" height="24" alt="Флаг Чехии">
+                    <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
                   </label>
                   <div class="add-plan__textarea-block">
                     <textarea class="add-plan__textarea" required name="activities" id="add-plan-activity-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
