@@ -1,9 +1,14 @@
 "use strict";
 
+let header = document.querySelector(".page-header");
+
+// Nojs fallback hide
+
+header.classList.remove("page-header--nojs");
+
 // Header Menu Toggler
 
 let toggleMenu = document.querySelector(".menu-toggler");
-let header = document.querySelector(".page-header");
 let headerMobile = document.querySelector(".page-header__mobile");
 
 if (toggleMenu && header && headerMobile) {

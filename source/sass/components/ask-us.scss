@@ -193,11 +193,6 @@
   align-items: center;
   justify-content: center;
 
-  svg {
-    width: 10px;
-    height: auto;
-  }
-
   @media (min-width: $tablet-width) {
     width: 80px;
     min-height: 80px;
