@@ -54,6 +54,17 @@
       }
     }
   }
+
+  &--nojs {
+    > .page-header__wrapper {
+      display: none;
+    }
+
+    .page-header__mobile--closed {
+      display: block;
+      position: relative;
+    }
+  }
 }
 
 .page-header__wrapper {
