@@ -224,8 +224,11 @@
   }
 
   &--active {
-    opacity: 1;
     color: var(--card-transport-color);
+
+    svg {
+      opacity: 1;
+    }
   }
 }
 
