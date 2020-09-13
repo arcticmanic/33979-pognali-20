@@ -12,6 +12,9 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const minify = require("gulp-minify");
+const htmlmin = require("gulp-htmlmin");
+
 
 // Styles
 
@@ -84,12 +87,22 @@ exports.webp = makeWebp;
 // Html
 
 const html = () => {
-  return gulp.src([
-    "source/*.html"
-  ], {
-    base: "source"
-  })
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
+}
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(minify({
+      ext: {
+        min: '.min.js'
+      },
+      ignoreFiles: ['-min.js']
+    }))
+    .pipe(gulp.dest("build/js"))
 }
 
 // Copy
@@ -97,7 +110,6 @@ const html = () => {
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/*.js",
     "source/*.ico"
   ], {
     base: "source"
@@ -115,7 +127,7 @@ const watcher = () => {
 exports.build = gulp.series(
   clean,
   makeWebp,
-  parallel(html, images, styles),
+  parallel(html, scripts, images, styles),
   copy
 );
 
